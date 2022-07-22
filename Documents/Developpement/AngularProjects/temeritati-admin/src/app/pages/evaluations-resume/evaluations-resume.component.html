@@ -1,0 +1,217 @@
+<div class="bg">
+    <div style="margin-top: 20px; margin-left: 20px;">
+        <nz-breadcrumb>
+            <nz-breadcrumb-item>Évaluations</nz-breadcrumb-item>
+            <nz-breadcrumb-item>
+                <a>Auto-évaluations</a>
+            </nz-breadcrumb-item>
+            <nz-breadcrumb-item>
+                <a>FOR_04_22_2</a>
+            </nz-breadcrumb-item>
+
+        </nz-breadcrumb>
+        <div class="titre">FOR_04_22_2</div>
+
+    </div>
+
+    <div class="shadow-1 contenu">
+        <div class="mi-titre">
+            <nz-steps [nzCurrent]="current">
+                <nz-step nzTitle="Résumé de la mission"></nz-step>
+                <nz-step nzTitle="Objectifs de la mission"></nz-step>
+                <nz-step nzTitle="Auto-évaluation"></nz-step>
+            </nz-steps>
+        </div>
+        <div *ngIf="current === 0">
+            <div class="contenu-inner" style="font-size: 1.1em;">
+                <div>
+                    <div class="libelle">
+                        Rôle chez le client
+                    </div>
+                    <div>
+                        <textarea style="width: 100%;" name="" id="" rows="5"></textarea>
+                    </div>
+                    <div class="indication">
+                        Décrivez en une expression le rôle qui vous a été confié.
+                    </div>
+                </div>
+
+                <div>
+                    <div class="libelle" style="margin-top: 40px">
+                        Mission chez le client
+                    </div>
+                    <div>
+                        <textarea style="width: 100%;" name="" id="" rows="5"></textarea>
+                    </div>
+                    <div class="indication">
+                        Décrivez succinctement les missions qui vous ont été affectées.
+                    </div>
+                </div>
+
+            </div>
+            <div class="contenu-boutons" style="">
+                <button (click)="passerAEtape2()" nz-button nzType="primary">Suivant</button> &nbsp;
+                <button nz-button>Enregistrer et finir plus tard</button>
+            </div>
+        </div>
+        <div *ngIf="current === 1">
+            <div class="contenu-inner" style="font-size: 1.1em;">
+                <div>
+                    <div class="libelle">
+                        Objectifs de la mission
+                    </div>
+                    <div>
+                        <textarea style="width: 100%;" name="" id="" rows="3"></textarea>
+                    </div>
+                    <div class="indication">
+                        Décrivez l’ensemble des objectifs de votre mission.
+                    </div>
+                </div>
+                <div>
+                    <div class="libelle">
+                        Moyens mis en œuvre pour atteindre les objectifs
+                    </div>
+                    <div>
+                        <textarea style="width: 100%;" name="" id="" rows="3"></textarea>
+                    </div>
+                    <div class="indication">
+                        Décrivez l’ensemble des moyens mis en place pour atteindre les objectifs
+                    </div>
+                </div>
+                <div>
+                    <div class="libelle">
+                        Compétences à mettre en œuvre
+                    </div>
+                    <div>
+                        <textarea style="width: 100%;" name="" id="" rows="3"></textarea>
+                    </div>
+                    <div class="indication">
+                        Listez l’ensemble des compétences mises en œuvre pour atteindre les objectifs
+                    </div>
+                </div>
+                <div>
+                    <div class="libelle">
+                        Difficultés
+                    </div>
+                    <div>
+                        <textarea style="width: 100%;" name="" id="" rows="3"></textarea>
+                    </div>
+                    <div class="indication">
+                        Listez les difficultés que vous avez rencontrés durant la mission
+                    </div>
+                </div>
+                <div>
+                    <div class="libelle">
+                        Plan d’action
+                    </div>
+                    <div>
+                        <textarea style="width: 100%;" name="" id="" rows="3"></textarea>
+                    </div>
+                    <div class="indication">
+                        Identifiez les axes d’amélioration et décrivez l’ensemble des plan d’actions prévus.
+                    </div>
+                </div>
+            </div>
+            <div class="contenu-boutons" style="">
+                <button (click)="passerAEtape3()" nz-button nzType="primary">Suivant</button> &nbsp;
+                <button nz-button>Enregistrer et finir plus tard</button>
+            </div>
+
+        </div>
+        <div *ngIf="current === 2">
+            <div class="auto-evaluation contenu-inner" style="font-size: 1.1em;">
+                <div>
+                    <div class="libelle">
+                        Relationnel Client
+                    </div>
+                    <div>
+                        <div class="icon-wrapper test-class">
+                            <i nz-icon nzType="frown" [class.icon-highlight]="preHighLight"></i>
+                            <nz-slider [nzMin]="1" [nzMarks]="marks" [nzMax]="4"></nz-slider>
+                            <i nz-icon nzType="smile" [class.icon-highlight]="nextHighLight"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="libelle">
+                        Connaissances du domaine
+                    </div>
+                    <div>
+                        <div class="icon-wrapper test-class">
+                            <i nz-icon nzType="frown" [class.icon-highlight]="preHighLight"></i>
+                            <nz-slider [nzMin]="1" [nzMarks]="marks" [nzMax]="4"></nz-slider>
+                            <i nz-icon nzType="smile" [class.icon-highlight]="nextHighLight"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="libelle">
+                        Compétences outils
+                    </div>
+                    <div>
+                        <div class="icon-wrapper test-class">
+                            <i nz-icon nzType="frown" [class.icon-highlight]="preHighLight"></i>
+                            <nz-slider [nzMin]="1" [nzMarks]="marks" [nzMax]="4"></nz-slider>
+                            <i nz-icon nzType="smile" [class.icon-highlight]="nextHighLight"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="libelle">
+                        Adaptabilité de la mission
+                    </div>
+                    <div>
+                        <div class="icon-wrapper test-class">
+                            <i nz-icon nzType="frown" [class.icon-highlight]="preHighLight"></i>
+                            <nz-slider [nzMin]="1" [nzMarks]="marks" [nzMax]="4"></nz-slider>
+                            <i nz-icon nzType="smile" [class.icon-highlight]="nextHighLight"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="libelle">
+                        Capacité à monter en compétences
+                    </div>
+                    <div>
+                        <div class="icon-wrapper test-class">
+                            <i nz-icon nzType="frown" [class.icon-highlight]="preHighLight"></i>
+                            <nz-slider [nzMin]="1" [nzMarks]="marks" [nzMax]="4"></nz-slider>
+                            <i nz-icon nzType="smile" [class.icon-highlight]="nextHighLight"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="libelle">
+                        Atteinte des objectifs chez le client
+                    </div>
+                    <div>
+                        <div class="icon-wrapper test-class">
+                            <i nz-icon nzType="frown" [class.icon-highlight]="preHighLight"></i>
+                            <nz-slider [nzMin]="1" [nzMarks]="marks" [nzMax]="4"></nz-slider>
+                            <i nz-icon nzType="smile" [class.icon-highlight]="nextHighLight"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="libelle">
+                        Commentaire supplémentaire
+                    </div>
+                    <div>
+                        <textarea style="width: 100%;" name="" id="" rows="3"></textarea>
+                    </div>
+                    <div class="indication">
+                        Vous pouvez ajouter un commentaire supplémentaire si vous le souhaitez.
+                    </div>
+                </div>
+            </div>
+            <div class="contenu-boutons" style="">
+                <button (click)="passerAEtape3()" nz-button nzType="primary">Terminer</button> &nbsp;
+                <button nz-button>Enregistrer et finir plus tard</button>
+            </div>
+
+        </div>
+    </div>
+    <div style="height: 100px">
+
+    </div>
+</div>

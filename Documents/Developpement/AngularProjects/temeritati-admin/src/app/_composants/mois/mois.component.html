@@ -1,0 +1,62 @@
+<div class="mois shadow-1" style="">
+    <div class="ligne grise">
+        <div nz-row>
+            <div nz-col nzFlex="1">Lun</div>
+            <div nz-col nzFlex="1">Mar</div>
+            <div nz-col nzFlex="1">Mer</div>
+            <div nz-col nzFlex="1">Jeu</div>
+            <div nz-col nzFlex="1">Ven</div>
+            <div nz-col nzFlex="1">Sam</div>
+            <div nz-col nzFlex="1">Dim</div>
+        </div>
+    </div>
+    <div class="ligne">
+        <div nz-row>
+            <div *ngFor="let item of items;" nz-col nzFlex="1">
+                <div [ngClass]="{'weekend': item > 5}">
+                    <b style="font-size: 1.1em;">
+                        {{item}}
+                    </b>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ligne">
+        <div nz-row>
+            <div *ngFor="let item of items;" nz-col nzFlex="1">
+                <div [ngClass]="{'weekend': item > 5}">
+                    <b style="font-size: 1.1em;">
+                        &nbsp;
+                    </b>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="ligne">
+
+        <div nz-row>
+            <div *ngFor="let item of items;" nz-col nzFlex="1">
+                <div [ngClass]="{'weekend': item > 5}">
+                    <b style="font-size: 1.1em;">
+                        &nbsp;
+                    </b>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ligne">
+        <div nz-row>
+            <div *ngFor="let item of items;" nz-col nzFlex="1">
+                <div [ngClass]="{'weekend': item > 5}">
+                    <b *ngIf="item < 6" style="font-size: 1.1em;">
+                        0,00
+                    </b>
+                    <b *ngIf="item  > 5" style="font-size: 1.1em;">
+                        &nbsp;
+                    </b>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

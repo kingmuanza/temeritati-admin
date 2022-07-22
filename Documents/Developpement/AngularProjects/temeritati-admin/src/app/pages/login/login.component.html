@@ -1,0 +1,57 @@
+<div class="login-container">
+    <div class="login-box">
+        <div>
+            <div class="dv-login-title">
+                <img src="../../../assets/img/small-logo-black.png" />
+                <span class="title-text">Temeritati</span>
+            </div>
+        </div>
+
+        <div>
+            <div class="login-sous-titre">
+                <p>Bienvenue sur notre plateforme de gestion <br> des comptes rendus d’activité</p>
+            </div>
+        </div>
+
+        <div>
+            <div class="login-form">
+                <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+                    <nz-form-item>
+                        <nz-form-control nzErrorTip="Please input your email address!">
+                            <nz-input-group [nzPrefix]="prefixTemplateUser">
+                                <input type="text" nz-input formControlName="login" placeholder="Login" />
+                            </nz-input-group>
+                            <ng-template #prefixTemplateUser><i nz-icon nzType="user"></i></ng-template>
+                        </nz-form-control>
+                    </nz-form-item>
+                    <nz-form-item>
+                        <nz-form-control nzErrorTip="Please input your Password!">
+                            <nz-input-group [nzPrefix]="prefixTemplateLock">
+                                <input type="password" nz-input formControlName="password" placeholder="Password" />
+                            </nz-input-group>
+                            <ng-template #prefixTemplateLock><i nz-icon nzType="lock"></i></ng-template>
+                        </nz-form-control>
+                    </nz-form-item>
+                    <div nz-row style="margin-bottom: 20px;">
+                        <div nz-col [nzSpan]="12" style="text-align: left;">
+
+                            <input nz-checkbox type="checkbox" formControlName="remember" style="width: 24px; vertical-align: middle;accent-color: #F759AB;">
+                            <span class="souvenir">Se souvenir </span>
+                        </div>
+                        <div nz-col [nzSpan]="12" style="text-align: right;">
+                            <a class="login-form-forgot">Mot de passe oublié ?</a>
+                        </div>
+                    </div>
+                    <button style="width: 100%;" nz-button class="login-form-button login-form-margin" [nzType]="'primary'">Se connecter</button>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<app-footer>
+
+</app-footer>

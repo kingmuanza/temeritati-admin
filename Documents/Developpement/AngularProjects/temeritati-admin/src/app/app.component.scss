@@ -1,0 +1,32 @@
+li {
+    a {
+        color: white;
+        font-family: 'Roboto';
+    }
+}
+
+.pp {
+    background-color: yellow;
+    height: 30px;
+    width: 30px;
+    margin-top: 8px;
+    border-radius: 15px;
+    background-image: url('../assets/img/pp.jpg');
+    background-size: cover;
+    &-container {
+        height: 46px;
+        overflow: hidden;
+    }
+}
+
+.badge {
+    background-color: red;
+    padding-right: 5px;
+    padding-left: 2px;
+    border-radius: 10px;
+}
+
+.app-name {
+    color: white;
+    margin-left: 8px;
+}

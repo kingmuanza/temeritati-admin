@@ -1,0 +1,158 @@
+.login-container {
+    background-image: url("../../../assets/img/bg-login.png");
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.login-box {
+    width: 360px;
+    margin: auto;
+    text-align: center;
+    padding-top: calc(15vh);
+    // sbackground-color: rgba(0, 0, 0, 0.043);
+}
+
+.dv-login-title {
+    .title-text {
+        font-family: 'IBM Plex Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 33px;
+        line-height: 100px;
+        color: rgba(0, 0, 0, 0.85);
+        margin-left: 10px;
+        vertical-align: middle;
+    }
+    img {
+        max-height: 46px;
+        min-width: 46px;
+        vertical-align: middle;
+    }
+}
+
+.login-sous-titre {
+    /* IBM/regular/14pt */
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    /* or 157% */
+    text-align: center;
+    padding-bottom: 40px;
+    /* grey 1 */
+    color: #747272;
+}
+
+.dv-login-text {
+    margin: 0 auto;
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #747272;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.login-form-forgot {
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: right;
+    color: #F759AB;
+}
+
+.ant-checkbox-inner {
+    background-color: #F759AB !important;
+    border: 1px solid #FFF2F2 !important;
+    border-radius: 2px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    z-index: 1;
+}
+
+.ant-input-affix-wrapper2 {
+    border-radius: 10px;
+}
+
+.login-footer2 {
+    display: flex;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+.login-footer-text2 {
+    font-family: 'Roboto';
+    margin: 0 auto;
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.45);
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+input {
+    width: 100%;
+}
+
+.anticon.anticon-user,
+.anticon.anticon-lock {
+    color: #F759AB !important;
+}
+
+nz-form-item,
+nz-form-control {
+    width: 100%;
+}
+
+nz-form-item {}
+
+.souvenir {
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    vertical-align: middle;
+}
+
+.message-complementaire {
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    /* or 157% */
+    text-align: left;
+    /* Character / Secondary .45 */
+    color: rgba(0, 0, 0, 0.45);
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.souvenir-forgot {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+input,
+nz-input-group,
+nz-input {
+    text-align: left;
+}

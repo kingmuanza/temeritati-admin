@@ -1,0 +1,70 @@
+<!-- NG-ZORRO -->
+<ul *ngIf="afficherMenu" nz-menu nzMode="horizontal" nzTheme="dark" style="color: white;">
+    <li nz-menu-item (click)="home()">
+        <img src="../assets/img/HeaderLogo.png" alt="">
+        <span class="app-name" style="">Temeritati</span>
+    </li>
+    <li nz-menu-item style="float: right">
+        <a>
+            FR
+        </a>
+    </li>
+    <li nz-menu-item style="float: right" (click)="profil()">
+
+        <div class="pp-container" style="">
+            <div class="pp">
+
+            </div>
+        </div>
+    </li>
+    <li nz-menu-item style="float: right">
+        <a>
+            <i nz-icon nzType="bell" nzTheme="outline"></i>
+            <sup class="badge" style="">
+              2
+            </sup>
+        </a>
+    </li>
+    <li nz-menu-item style="float: right">
+        <a>
+            <i nz-icon nzType="question-circle" nzTheme="outline"></i>
+        </a>
+    </li>
+    <li nz-menu-item style="float: right">
+        <a (click)="evaluations()">
+            <i nz-icon nzType="star"></i>
+            <span style="margin-left: 8px">Evaluations</span>
+        </a>
+    </li>
+    <li nz-menu-item style="float: right">
+        <a>
+            <i nz-icon nzType="calendar"></i>
+            <span style="margin-left: 8px">Congés</span>
+        </a>
+    </li>
+    <li nz-menu-item style="float: right">
+        <a>
+            <i nz-icon nzType="book"></i>
+            <span style="margin-left: 8px">Factures</span>
+        </a>
+    </li>
+    <li nz-menu-item style="float: right">
+        <a (click)="cra()">
+            <i nz-icon nzType="calendar"></i>
+            <span style="margin-left: 8px">CRA</span>
+        </a>
+    </li>
+    <li nz-menu-item style="float: right">
+        <a (click)="cra()">
+            <i nz-icon nzType="partition" style="transform: rotate(90deg);"></i>
+            <span style="margin-left: 8px">Entreprise</span>
+        </a>
+    </li>
+    <li nz-menu-item style="float: right">
+        <a (click)="accueil()">
+            <i nz-icon nzType="home"></i>
+            <span style="margin-left: 8px">Accueil</span>
+        </a>
+    </li>
+</ul>
+<router-outlet></router-outlet>
