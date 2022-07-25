@@ -22,6 +22,8 @@ import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzStepsModule } from 'ng-zorro-antd/steps';
 import { NzSliderModule } from 'ng-zorro-antd/slider';
+import { NzCollapseModule } from 'ng-zorro-antd/collapse';
+import { NzTagModule } from 'ng-zorro-antd/tag';
 
 import { ProfilComponent } from './pages/profil/profil.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -40,6 +42,9 @@ import { ClientsComponent } from './pages/clients/clients.component';
 import { ClientsDetailComponent } from './pages/clients-detail/clients-detail.component';
 import { MissionsComponent } from './pages/missions/missions.component';
 import { ConsultantsComponent } from './pages/consultants/consultants.component';
+import { MissionDisplayComponent } from './_composants/mission-display/mission-display.component';
+import { MissionsDetailComponent } from './pages/missions-detail/missions-detail.component';
+import { ConsultantsDetailComponent } from './pages/consultants-detail/consultants-detail.component';
 
 registerLocaleData(fr);
 
@@ -67,7 +72,10 @@ const ngZorroConfig: NzConfig = {
     ClientsComponent,
     ClientsDetailComponent,
     MissionsComponent,
-    ConsultantsComponent
+    ConsultantsComponent,
+    MissionDisplayComponent,
+    MissionsDetailComponent,
+    ConsultantsDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -89,6 +97,8 @@ const ngZorroConfig: NzConfig = {
     NzTableModule,
     NzStepsModule,
     NzSliderModule,
+    NzCollapseModule,
+    NzTagModule,
   ],
   providers: [
     { provide: NZ_I18N, useValue: fr_FR },

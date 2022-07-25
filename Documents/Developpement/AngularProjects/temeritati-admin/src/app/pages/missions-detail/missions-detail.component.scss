@@ -65,42 +65,8 @@ th {
     background-attachment: fixed;
 }
 
-.titre-moyen {
-    /* IBM/bold/28pt */
-    font-family: 'IBM Plex Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 38px;
-    /* identical to box height, or 136% */
-    /* Character/Title .85 */
-    color: rgba(0, 0, 0, 0.85);
-}
-
-.titre-petit {
+.mission-titre {
     margin-top: 20px;
-    font-family: 'IBM Plex Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 38px;
-    /* identical to box height, or 136% */
-    display: flex;
-    align-items: center;
-    /* Character/Title .85 */
-    color: rgba(0, 0, 0, 0.85);
-}
-
-.mois {
-    margin-bottom: 40px;
-}
-
-.mois-infos {
-    margin-top: 20px;
-}
-
-.mois-infos-titre {
-    margin-bottom: 20px;
     /* IBM/semibold/16pt */
     font-family: 'IBM Plex Sans';
     font-style: normal;
@@ -114,26 +80,16 @@ th {
     color: rgba(0, 0, 0, 0.85);
 }
 
-.mois-infos-chiffre {
-    /* IBM/bold/28pt */
+.mission-valeur {
+    margin-top: 10px;
     font-family: 'IBM Plex Sans';
     font-style: normal;
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 38px;
-    /* identical to box height, or 136% */
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
     display: flex;
     align-items: center;
-    /* Pink */
-    color: #F759AB;
-}
-
-.gris {
-    color: #8C8C8C;
-}
-
-.ant-collapse-item {
-    .ant-collapse-header {
-        color: #F759AB;
-    }
+    /* Character/Title .85 */
+    color: rgba(0, 0, 0, 0.85);
 }

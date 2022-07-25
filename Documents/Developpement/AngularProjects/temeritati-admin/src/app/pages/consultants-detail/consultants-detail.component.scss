@@ -65,6 +65,16 @@ th {
     background-attachment: fixed;
 }
 
+.bleu {
+    color: #1890FF;
+}
+
+.pp {
+    width: 155px;
+    height: 155px;
+    border-radius: 50%;
+}
+
 .titre-moyen {
     /* IBM/bold/28pt */
     font-family: 'IBM Plex Sans';
@@ -92,15 +102,15 @@ th {
 }
 
 .mois {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .mois-infos {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .mois-infos-titre {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     /* IBM/semibold/16pt */
     font-family: 'IBM Plex Sans';
     font-style: normal;

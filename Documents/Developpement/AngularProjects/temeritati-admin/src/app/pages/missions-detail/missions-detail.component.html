@@ -1,0 +1,119 @@
+<div class="bg">
+    <div style="margin-top: 20px; margin-left: 20px;">
+        <nz-breadcrumb>
+            <nz-breadcrumb-item>Missions</nz-breadcrumb-item>
+            <nz-breadcrumb-item>
+                <a>Fortuneo</a>
+            </nz-breadcrumb-item>
+
+        </nz-breadcrumb>
+        <div class="titre">Détails de la mission</div>
+        <div class="soustitre">
+            Vous pouvez modifier les informations de votre client ici
+        </div>
+    </div>
+
+    <div style="margin-top: 20px">
+        <ul nz-menu nzMode="horizontal">
+            <li nz-menu-item (click)="selectionner('aSaisir')" [nzSelected]="aSaisir">
+                <span class="menu-design">Informations</span>
+                <span class="badge">
+                    03
+                </span>
+            </li>
+            <li nz-menu-item (click)="selectionner('enAttente')" [nzSelected]="enAttente">
+                <span class="menu-design">CRA</span>
+                <span class="badge">
+                    02
+                </span>
+            </li>
+            <li nz-menu-item (click)="selectionner('rejetees')" [nzSelected]="rejetees">
+                <span class="menu-design">Factures</span>
+                <span class="badge">
+                    02
+                </span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="contenu">
+        <div *ngIf="aSaisir">
+            <div style="margin:40px">
+                <div style="margin-top:0px">
+                    <div style="margin-bottom:20px">
+                        <div nz-row>
+                            <div nz-col nzSpan="20">
+
+                            </div>
+                            <div nz-col nzSpan="2">
+                                <button nz-button nzType="primary" style="width: 90%;">
+                                    <i nz-icon nzType="edit"></i>
+                                    Editer
+                                </button>
+                            </div>
+                            <div nz-col nzSpan="2">
+                                <button nz-button style="width: 90%;">
+                                    <i nz-icon nzType="container" nzTheme="outline"></i>
+                                    Archiver
+                                </button>
+                            </div>
+                        </div>
+                        <app-mission-display></app-mission-display>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="enAttente">
+            <div style="margin:40px">
+                <div style="margin-top:0px">
+                    <div style="margin-bottom:20px">
+                        <div nz-row>
+                            <div nz-col nzSpan="20">
+
+                            </div>
+                            <div nz-col nzSpan="2">
+                                <button nz-button nzType="primary" style="width: 90%;">
+                                    <i nz-icon nzType="edit"></i>
+                                    Editer
+                                </button>
+                            </div>
+                            <div nz-col nzSpan="2">
+                                <button nz-button style="width: 90%;">
+                                    <i nz-icon nzType="container" nzTheme="outline"></i>
+                                    Archiver
+                                </button>
+                            </div>
+                        </div>
+                        <app-mission-display></app-mission-display>
+
+                        <div>
+
+                            <div nz-row>
+                                <div nz-col nzSpan="24">
+
+                                    <div class="mission-titre">
+                                        Documents
+                                    </div>
+                                    <p class="mission-valeur">
+                                        <button nz-button>
+                                            <i nz-icon nzType="upload"></i>
+                                            Importer
+                                        </button>
+                                    </p>
+                                    <p class="mission-valeur">
+                                        <i nz-icon nzType="link"></i>&nbsp;&nbsp;
+                                        <a style="margin-left: 10px; margin-right: 40px;" href="#">CV_DAYAN_MAMMOU_2022.pdf</a>&nbsp;&nbsp;
+                                        <i nz-icon nzType="delete"></i>&nbsp;&nbsp;
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

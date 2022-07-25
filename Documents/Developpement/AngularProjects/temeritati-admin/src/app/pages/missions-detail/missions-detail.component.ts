@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-clients-detail',
-  templateUrl: './clients-detail.component.html',
-  styleUrls: ['./clients-detail.component.scss']
+  selector: 'app-missions-detail',
+  templateUrl: './missions-detail.component.html',
+  styleUrls: ['./missions-detail.component.scss']
 })
-export class ClientsDetailComponent implements OnInit {
+export class MissionsDetailComponent implements OnInit {
 
   aSaisir = true;
   enAttente = false;
@@ -16,22 +15,27 @@ export class ClientsDetailComponent implements OnInit {
 
   listOfColumn = [
     {
-      title: 'Client ',
+      title: 'Mission ',
       compare: null,
       priority: false
     },
     {
-      title: 'Mission',
+      title: 'Client',
       compare: null,
       priority: 3
     },
     {
-      title: 'Date de début',
+      title: 'Consultant',
       compare: null,
       priority: 2
     },
     {
-      title: 'Nombre de consultants en mission',
+      title: 'Date début',
+      compare: null,
+      priority: 1
+    },
+    {
+      title: 'Date fin',
       compare: null,
       priority: 1
     },
@@ -44,41 +48,15 @@ export class ClientsDetailComponent implements OnInit {
 
   listOfData = [
     {
-      name: 'Fortuneo',
-      chinese: 'Audit IT',
-      math: '20/04/2022',
-      math2: '3',
-      english: 'Saisir'
-    },
-    {
-      name: 'Fortuneo',
-      chinese: 'Audit IT',
-      math: '15/04/2022',
-      math2: '1',
-      english: 'Saisir'
+      name: 'Audit IT',
+      chinese: 'Fortuneo',
+      math: 'Dayan Mammou',
+      math2: '02/01/2022',
+      english: '03/03/2022'
     },
   ];
 
-  panels = [
-    {
-      active: true,
-      name: 'Mission N°FOR_020422_1',
-      disabled: false
-    },
-    {
-      active: false,
-      disabled: false,
-      name: 'Mission N°FOR_020422_2'
-    },
-    {
-      active: false,
-      disabled: false,
-      name: 'Mission N°FOR_020422_3'
-    },
-  ];
-  constructor(
-    private router: Router
-  ) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
@@ -106,8 +84,5 @@ export class ClientsDetailComponent implements OnInit {
     }
   }
 
-  voir() {
-    this.router.navigate(['clients', 'detail']);
-  }
 
 }
