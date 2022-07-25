@@ -12,6 +12,8 @@ export class AppComponent {
   theme = true;
   url = "";
   afficherMenu = true;
+  isEntreprise = true;
+
 
   constructor(
     private router: Router,
@@ -27,8 +29,13 @@ export class AppComponent {
       if (this.url.indexOf('/login') !== -1) {
         this.afficherMenu = false;
       } else {
-
         this.afficherMenu = true;
+      }
+
+      if (this.url.indexOf('/missions') !== -1 ||  this.url.indexOf('/clients') !== -1  ||  this.url.indexOf('/consultants') !== -1 ) {
+        this.isEntreprise = true;
+      } else {
+        this.isEntreprise = false;
       }
       console.log('url');
       console.log(this.url);
@@ -54,8 +61,18 @@ export class AppComponent {
   cra() {
     this.router.navigate(['/cra']);
   }
-  
   evaluations() {
     this.router.navigate(['/evaluations']);
+  }
+  
+  clients() {
+    this.router.navigate(['/clients']);
+  }
+  
+  missions() {
+    this.router.navigate(['/missions']);
+  }
+  consultants() {
+    this.router.navigate(['/consultants']);
   }
 }

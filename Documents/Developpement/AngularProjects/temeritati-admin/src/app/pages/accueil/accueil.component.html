@@ -3,20 +3,204 @@
         <nz-breadcrumb>
             <nz-breadcrumb-item>Accueil</nz-breadcrumb-item>
         </nz-breadcrumb>
-        <div class="titre">Votre tableau de bord</div>
-        <div class="soustitre">
-            Retrouvez ici une vue globale de votre espace
+
+        <div nz-row>
+            <div nz-col nzSpan="18">
+                <div class="titre">Votre tableau de bord</div>
+                <div class="soustitre">
+                    Retrouvez ici une vue globale de votre espace
+                </div>
+            </div>
+            <div nz-col nzSpan="6">
+                <div nz-row>
+                    <div nz-col nzSpan="8">
+                        <div class="stat">
+                            <div class="stat-titre">
+                                Clients
+                            </div>
+                            <div class="stat-icone">
+                                <i nz-icon nzType="team" nzTheme="outline"></i>
+                                <span>
+                                    30
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div nz-col nzSpan="8">
+                        <div class="stat">
+                            <div class="stat-titre">
+                                Missions en cours
+                            </div>
+                            <div class="stat-icone">
+                                <i nz-icon nzType="audit" nzTheme="outline"></i>
+                                <span>
+                                    21
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div nz-col nzSpan="8">
+                        <div class="stat">
+                            <div class="stat-titre">
+                                Consultants
+                            </div>
+                            <div class="stat-icone">
+                                <i nz-icon nzType="user" nzTheme="outline"></i>
+                                <span>
+                                    15
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="contenu">
-        <div nz-row>
-            <div nz-col nzSpan="6" style="height: 100%; background-color: #fff;">
-
+        <div class="contenu-item">
+            <div class="titre-moyen">
+                Compte rendus d’activité
             </div>
-            <div nz-col nzSpan="18">
+            <div class="mois">
+                <div class="titre-petit">
+                    Mois prochain : Février 2022
+
+                    <button nz-button nzType="primary" style="margin-left: 20px">
+                    <i nz-icon nzType="send"></i>
+                    Ouvrir la saise aux consultants
+                </button>
+                </div>
+                <div nz-row>
+                    <div nz-col nzSpan="6">
+
+                    </div>
+                    <div nz-col nzSpan="18">
 
 
+                    </div>
+                </div>
+            </div>
+            <div class="mois">
+                <div class="titre-petit">
+                    Mois en cours : Janvier 2022
+                </div>
+                <div nz-row>
+                    <div nz-col nzSpan="6">
+                        <div class="mois-infos">
+                            <div class="mois-infos-titre">
+                                Total
+                            </div>
+                            <div class="mois-infos-chiffre">
+                                21
+                            </div>
+                        </div>
+                    </div>
+                    <div nz-col nzSpan="6">
+                        <div class="mois-infos">
+                            <div class="mois-infos-titre">
+                                À saisir
+                            </div>
+                            <div class="mois-infos-chiffre">
+                                20
+                            </div>
+                        </div>
+                    </div>
+                    <div nz-col nzSpan="6">
+                        <div class="mois-infos">
+                            <div class="mois-infos-titre">
+                                Validés
+                            </div>
+                            <div class="mois-infos-chiffre">
+                                1
+                            </div>
+                        </div>
+                    </div>
+                    <div nz-col nzSpan="6">
+                        <div class="mois-infos">
+                            <div class="mois-infos-titre">
+                                Rejetés
+                            </div>
+                            <div class="mois-infos-chiffre">
+                                0
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contenu-item">
+            <div class="titre-moyen">
+                Factures
+            </div>
+            <div class="mois">
+                <div class="titre-petit">
+                    Mois en cours : Janvier 2022
+                </div>
+                <div nz-row>
+                    <div nz-col nzSpan="8">
+                        <div class="mois-infos">
+                            <div class="mois-infos-titre">
+                                Total
+                            </div>
+                            <div class="mois-infos-chiffre">
+                                11
+                            </div>
+                        </div>
+                    </div>
+                    <div nz-col nzSpan="8">
+                        <div class="mois-infos">
+                            <div class="mois-infos-titre">
+                                A Envoyer
+                            </div>
+                            <div class="mois-infos-chiffre">
+                                1
+                            </div>
+                        </div>
+                    </div>
+                    <div nz-col nzSpan="8">
+                        <div class="mois-infos">
+                            <div class="mois-infos-titre">
+                                Validés
+                            </div>
+                            <div class="mois-infos-chiffre">
+                                10
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contenu-item">
+            <div class="titre-moyen">
+                Congés
+            </div>
+            <div class="mois">
+                <div class="titre-petit">
+                    Mois en cours : Janvier 2022
+                </div>
+                <div nz-row>
+                    <div nz-col nzSpan="8">
+                        <div class="mois-infos">
+                            <div class="mois-infos-titre">
+                                Demandes
+                            </div>
+                            <div class="mois-infos-chiffre">
+                                11
+                            </div>
+                        </div>
+                    </div>
+                    <div nz-col nzSpan="8">
+                        <div class="mois-infos">
+                            <div class="mois-infos-titre">
+                                Validés
+                            </div>
+                            <div class="mois-infos-chiffre">
+                                20
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

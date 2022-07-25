@@ -36,6 +36,10 @@ import { EvaluationsComponent } from './pages/evaluations/evaluations.component'
 import { EvaluationsResumeComponent } from './pages/evaluations-resume/evaluations-resume.component';
 import { EvaluationsNouveauComponent } from './pages/evaluations-nouveau/evaluations-nouveau.component';
 import { AccueilComponent } from './pages/accueil/accueil.component';
+import { ClientsComponent } from './pages/clients/clients.component';
+import { ClientsDetailComponent } from './pages/clients-detail/clients-detail.component';
+import { MissionsComponent } from './pages/missions/missions.component';
+import { ConsultantsComponent } from './pages/consultants/consultants.component';
 
 registerLocaleData(fr);
 
@@ -59,7 +63,11 @@ const ngZorroConfig: NzConfig = {
     EvaluationsComponent,
     EvaluationsResumeComponent,
     EvaluationsNouveauComponent,
-    AccueilComponent
+    AccueilComponent,
+    ClientsComponent,
+    ClientsDetailComponent,
+    MissionsComponent,
+    ConsultantsComponent
   ],
   imports: [
     BrowserModule,

@@ -54,11 +54,13 @@
             <span style="margin-left: 8px">CRA</span>
         </a>
     </li>
-    <li nz-menu-item style="float: right">
-        <a (click)="cra()">
-            <i nz-icon nzType="partition" style="transform: rotate(90deg);"></i>
-            <span style="margin-left: 8px">Entreprise</span>
-        </a>
+    <ng-template #titleTpl><i nz-icon class="icone" nzType="partition"></i><span>Entreprise</span></ng-template>
+    <li nz-submenu [ngClass]="{'ant-menu-item-selected': isEntreprise}" [nzTitle]="titleTpl" style="float: right">
+        <ul>
+            <li (click)="clients()" nz-menu-item>Clients</li>
+            <li (click)="missions()" nz-menu-item>Missions</li>
+            <li (click)="consultants()" nz-menu-item>Consultants</li>
+        </ul>
     </li>
     <li nz-menu-item style="float: right">
         <a (click)="accueil()">
