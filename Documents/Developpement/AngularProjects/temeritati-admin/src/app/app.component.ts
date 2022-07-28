@@ -65,6 +65,14 @@ export class AppComponent {
     this.router.navigate(['/evaluations']);
   }
   
+  factures() {
+    this.router.navigate(['/factures']);
+  }
+  
+  conges() {
+    this.router.navigate(['/conges']);
+  }
+  
   clients() {
     this.router.navigate(['/clients']);
   }

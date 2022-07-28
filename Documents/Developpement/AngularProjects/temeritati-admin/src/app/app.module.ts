@@ -45,6 +45,10 @@ import { ConsultantsComponent } from './pages/consultants/consultants.component'
 import { MissionDisplayComponent } from './_composants/mission-display/mission-display.component';
 import { MissionsDetailComponent } from './pages/missions-detail/missions-detail.component';
 import { ConsultantsDetailComponent } from './pages/consultants-detail/consultants-detail.component';
+import { FacturesComponent } from './pages/factures/factures.component';
+import { CongesComponent } from './pages/conges/conges.component';
+import { FacturesDetailComponent } from './pages/factures-detail/factures-detail.component';
+import { CongesDetailComponent } from './pages/conges-detail/conges-detail.component';
 
 registerLocaleData(fr);
 
@@ -75,7 +79,11 @@ const ngZorroConfig: NzConfig = {
     ConsultantsComponent,
     MissionDisplayComponent,
     MissionsDetailComponent,
-    ConsultantsDetailComponent
+    ConsultantsDetailComponent,
+    FacturesComponent,
+    CongesComponent,
+    FacturesDetailComponent,
+    CongesDetailComponent
   ],
   imports: [
     BrowserModule,
