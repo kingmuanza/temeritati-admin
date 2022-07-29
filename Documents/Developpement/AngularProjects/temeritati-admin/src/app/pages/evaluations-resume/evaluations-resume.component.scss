@@ -72,8 +72,8 @@ th {
     padding: 40px;
     margin-top: 40px;
     &-inner {
-        padding-left: 80px;
-        padding-right: 80px;
+        // padding-left: 80px;
+        // padding-right: 80px;
     }
     &-boutons {
         text-align: right;
@@ -114,6 +114,18 @@ input[type='radio'] {
 }
 
 .indication {
+    display: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 157% */
+    /* Character / Secondary .45 */
+    color: rgba(0, 0, 0, 0.45);
+}
+
+.indication2 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -156,4 +168,15 @@ input[type='radio'] {
         margin-top: 40px;
         margin-bottom: 10px;
     }
+}
+
+.qui {
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 38px;
+    /* identical to box height, or 136% */
+    /* Character/Title .85 */
+    color: rgba(0, 0, 0, 0.85);
 }

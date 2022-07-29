@@ -29,22 +29,25 @@
                         Rôle chez le client
                     </div>
                     <div>
-                        <textarea style="width: 100%;" name="" id="" rows="5"></textarea>
+                        <textarea disabled style="width: 100%;" name="" id="" rows="5">Cras pharetra felis quam, sed consectetur tellus tincidunt nec. Curabitur vitae nibh tempor, varius urna vitae, ultrices orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam tristique id erat scelerisque lacinia. Aliquam vel ante eget elit semper feugiat id ut eros. In id urna volutpat, maximus odio sit amet, hendrerit nisl. Vestibulum laoreet fringilla felis eget auctor. Vivamus tempus turpis ac mattis laoreet. Maecenas convallis turpis a mi hendrerit hendrerit. Sed egestas ligula lorem, non dignissim risus porttitor vitae. Praesent varius lorem ut massa tincidunt, vitae euismod diam euismod. Etiam id tortor nec urna commodo condimentum non at nibh.
+                        </textarea>
                     </div>
-                    <div class="indication">
-                        Décrivez en une expression le rôle qui vous a été confié.
+                    <div>
+                        <app-ajouter-commentaire libelle="Commentaire de l’évaluateur"></app-ajouter-commentaire>
                     </div>
                 </div>
+
 
                 <div>
                     <div class="libelle" style="margin-top: 40px">
                         Mission chez le client
                     </div>
                     <div>
-                        <textarea style="width: 100%;" name="" id="" rows="5"></textarea>
+                        <textarea disabled style="width: 100%;" name="" id="" rows="5">Cras pharetra felis quam, sed consectetur tellus tincidunt nec. Curabitur vitae nibh tempor, varius urna vitae, ultrices orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam tristique id erat scelerisque lacinia. Aliquam vel ante eget elit semper feugiat id ut eros. In id urna volutpat, maximus odio sit amet, hendrerit nisl. Vestibulum laoreet fringilla felis eget auctor. Vivamus tempus turpis ac mattis laoreet. Maecenas convallis turpis a mi hendrerit hendrerit. Sed egestas ligula lorem, non dignissim risus porttitor vitae. Praesent varius lorem ut massa tincidunt, vitae euismod diam euismod. Etiam id tortor nec urna commodo condimentum non at nibh.
+                        </textarea>
                     </div>
-                    <div class="indication">
-                        Décrivez succinctement les missions qui vous ont été affectées.
+                    <div>
+                        <app-ajouter-commentaire libelle="Commentaire de l’évaluateur"></app-ajouter-commentaire>
                     </div>
                 </div>
 
@@ -61,10 +64,13 @@
                         Objectifs de la mission
                     </div>
                     <div>
-                        <textarea style="width: 100%;" name="" id="" rows="3"></textarea>
+                        <textarea disabled style="width: 100%;" name="" id="" rows="3">Cras pharetra felis quam, sed consectetur tellus tincidunt nec.</textarea>
                     </div>
                     <div class="indication">
                         Décrivez l’ensemble des objectifs de votre mission.
+                    </div>
+                    <div>
+                        <app-ajouter-commentaire libelle="Commentaire de l’évaluateur"></app-ajouter-commentaire>
                     </div>
                 </div>
                 <div>
@@ -72,10 +78,13 @@
                         Moyens mis en œuvre pour atteindre les objectifs
                     </div>
                     <div>
-                        <textarea style="width: 100%;" name="" id="" rows="3"></textarea>
+                        <textarea disabled style="width: 100%;" name="" id="" rows="3">Cras pharetra felis quam, sed consectetur tellus tincidunt nec.</textarea>
                     </div>
                     <div class="indication">
                         Décrivez l’ensemble des moyens mis en place pour atteindre les objectifs
+                    </div>
+                    <div>
+                        <app-ajouter-commentaire libelle="Commentaire de l’évaluateur"></app-ajouter-commentaire>
                     </div>
                 </div>
                 <div>
@@ -83,10 +92,13 @@
                         Compétences à mettre en œuvre
                     </div>
                     <div>
-                        <textarea style="width: 100%;" name="" id="" rows="3"></textarea>
+                        <textarea disabled style="width: 100%;" name="" id="" rows="3">Cras pharetra felis quam, sed consectetur tellus tincidunt nec.</textarea>
                     </div>
                     <div class="indication">
                         Listez l’ensemble des compétences mises en œuvre pour atteindre les objectifs
+                    </div>
+                    <div>
+                        <app-ajouter-commentaire libelle="Commentaire de l’évaluateur"></app-ajouter-commentaire>
                     </div>
                 </div>
                 <div>
@@ -94,10 +106,13 @@
                         Difficultés
                     </div>
                     <div>
-                        <textarea style="width: 100%;" name="" id="" rows="3"></textarea>
+                        <textarea disabled style="width: 100%;" name="" id="" rows="3">Cras pharetra felis quam, sed consectetur tellus tincidunt nec.</textarea>
                     </div>
                     <div class="indication">
                         Listez les difficultés que vous avez rencontrés durant la mission
+                    </div>
+                    <div>
+                        <app-ajouter-commentaire libelle="Commentaire de l’évaluateur"></app-ajouter-commentaire>
                     </div>
                 </div>
                 <div>
@@ -105,10 +120,13 @@
                         Plan d’action
                     </div>
                     <div>
-                        <textarea style="width: 100%;" name="" id="" rows="3"></textarea>
+                        <textarea disabled style="width: 100%;" name="" id="" rows="3">Cras pharetra felis quam, sed consectetur tellus tincidunt nec.</textarea>
                     </div>
                     <div class="indication">
                         Identifiez les axes d’amélioration et décrivez l’ensemble des plan d’actions prévus.
+                    </div>
+                    <div>
+                        <app-ajouter-commentaire libelle="Commentaire de l’évaluateur"></app-ajouter-commentaire>
                     </div>
                 </div>
             </div>
@@ -120,95 +138,197 @@
         </div>
         <div *ngIf="current === 2">
             <div class="auto-evaluation contenu-inner" style="font-size: 1.1em;">
-                <div>
-                    <div class="libelle">
-                        Relationnel Client
-                    </div>
-                    <div>
-                        <div class="icon-wrapper test-class">
-                            <i nz-icon nzType="frown" [class.icon-highlight]="preHighLight"></i>
-                            <nz-slider [nzMin]="1" [nzMarks]="marks" [nzMax]="4"></nz-slider>
-                            <i nz-icon nzType="smile" [class.icon-highlight]="nextHighLight"></i>
+                <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24}">
+                    <div nz-col nzSpan="12" style="opacity: 0.8;">
+                        <div class="qui">
+                            Consultant
+                        </div>
+                        <div>
+                            <div class="libelle">
+                                Relationnel Client
+                            </div>
+                            <div>
+                                <div class="icon-wrapper test-class">
+                                    <i nz-icon nzType="frown" [class.icon-highlight]="preHighLight"></i>
+                                    <nz-slider [nzMin]="1" [nzMarks]="marks" [nzMax]="4"></nz-slider>
+                                    <i nz-icon nzType="smile" [class.icon-highlight]="nextHighLight"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="libelle">
+                                Connaissances du domaine
+                            </div>
+                            <div>
+                                <div class="icon-wrapper test-class">
+                                    <i nz-icon nzType="frown" [class.icon-highlight]="preHighLight"></i>
+                                    <nz-slider [nzMin]="1" [nzMarks]="marks" [nzMax]="4"></nz-slider>
+                                    <i nz-icon nzType="smile" [class.icon-highlight]="nextHighLight"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="libelle">
+                                Compétences outils
+                            </div>
+                            <div>
+                                <div class="icon-wrapper test-class">
+                                    <i nz-icon nzType="frown" [class.icon-highlight]="preHighLight"></i>
+                                    <nz-slider [nzMin]="1" [nzMarks]="marks" [nzMax]="4"></nz-slider>
+                                    <i nz-icon nzType="smile" [class.icon-highlight]="nextHighLight"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="libelle">
+                                Adaptabilité de la mission
+                            </div>
+                            <div>
+                                <div class="icon-wrapper test-class">
+                                    <i nz-icon nzType="frown" [class.icon-highlight]="preHighLight"></i>
+                                    <nz-slider [nzMin]="1" [nzMarks]="marks" [nzMax]="4"></nz-slider>
+                                    <i nz-icon nzType="smile" [class.icon-highlight]="nextHighLight"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="libelle">
+                                Capacité à monter en compétences
+                            </div>
+                            <div>
+                                <div class="icon-wrapper test-class">
+                                    <i nz-icon nzType="frown" [class.icon-highlight]="preHighLight"></i>
+                                    <nz-slider [nzMin]="1" [nzMarks]="marks" [nzMax]="4"></nz-slider>
+                                    <i nz-icon nzType="smile" [class.icon-highlight]="nextHighLight"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="libelle">
+                                Atteinte des objectifs chez le client
+                            </div>
+                            <div>
+                                <div class="icon-wrapper test-class">
+                                    <i nz-icon nzType="frown" [class.icon-highlight]="preHighLight"></i>
+                                    <nz-slider [nzMin]="1" [nzMarks]="marks" [nzMax]="4"></nz-slider>
+                                    <i nz-icon nzType="smile" [class.icon-highlight]="nextHighLight"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="libelle">
+                                Commentaire supplémentaire
+                            </div>
+                            <div>
+                                <textarea style="width: 100%;" name="" id="" rows="3"></textarea>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div>
-                    <div class="libelle">
-                        Connaissances du domaine
-                    </div>
-                    <div>
-                        <div class="icon-wrapper test-class">
-                            <i nz-icon nzType="frown" [class.icon-highlight]="preHighLight"></i>
-                            <nz-slider [nzMin]="1" [nzMarks]="marks" [nzMax]="4"></nz-slider>
-                            <i nz-icon nzType="smile" [class.icon-highlight]="nextHighLight"></i>
+                    <div nz-col nzSpan="12">
+                        <div class="qui">
+                            Évaluateur
                         </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="libelle">
-                        Compétences outils
-                    </div>
-                    <div>
-                        <div class="icon-wrapper test-class">
-                            <i nz-icon nzType="frown" [class.icon-highlight]="preHighLight"></i>
-                            <nz-slider [nzMin]="1" [nzMarks]="marks" [nzMax]="4"></nz-slider>
-                            <i nz-icon nzType="smile" [class.icon-highlight]="nextHighLight"></i>
+                        <div>
+                            <div class="libelle">
+                                Relationnel Client
+                            </div>
+                            <div>
+                                <div class="icon-wrapper test-class">
+                                    <i nz-icon nzType="frown" [class.icon-highlight]="preHighLight"></i>
+                                    <nz-slider [nzMin]="1" [nzMarks]="marks" [nzMax]="4"></nz-slider>
+                                    <i nz-icon nzType="smile" [class.icon-highlight]="nextHighLight"></i>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="libelle">
-                        Adaptabilité de la mission
-                    </div>
-                    <div>
-                        <div class="icon-wrapper test-class">
-                            <i nz-icon nzType="frown" [class.icon-highlight]="preHighLight"></i>
-                            <nz-slider [nzMin]="1" [nzMarks]="marks" [nzMax]="4"></nz-slider>
-                            <i nz-icon nzType="smile" [class.icon-highlight]="nextHighLight"></i>
+                        <div>
+                            <div class="libelle">
+                                Connaissances du domaine
+                            </div>
+                            <div>
+                                <div class="icon-wrapper test-class">
+                                    <i nz-icon nzType="frown" [class.icon-highlight]="preHighLight"></i>
+                                    <nz-slider [nzMin]="1" [nzMarks]="marks" [nzMax]="4"></nz-slider>
+                                    <i nz-icon nzType="smile" [class.icon-highlight]="nextHighLight"></i>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="libelle">
-                        Capacité à monter en compétences
-                    </div>
-                    <div>
-                        <div class="icon-wrapper test-class">
-                            <i nz-icon nzType="frown" [class.icon-highlight]="preHighLight"></i>
-                            <nz-slider [nzMin]="1" [nzMarks]="marks" [nzMax]="4"></nz-slider>
-                            <i nz-icon nzType="smile" [class.icon-highlight]="nextHighLight"></i>
+                        <div>
+                            <div class="libelle">
+                                Compétences outils
+                            </div>
+                            <div>
+                                <div class="icon-wrapper test-class">
+                                    <i nz-icon nzType="frown" [class.icon-highlight]="preHighLight"></i>
+                                    <nz-slider [nzMin]="1" [nzMarks]="marks" [nzMax]="4"></nz-slider>
+                                    <i nz-icon nzType="smile" [class.icon-highlight]="nextHighLight"></i>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="libelle">
-                        Atteinte des objectifs chez le client
-                    </div>
-                    <div>
-                        <div class="icon-wrapper test-class">
-                            <i nz-icon nzType="frown" [class.icon-highlight]="preHighLight"></i>
-                            <nz-slider [nzMin]="1" [nzMarks]="marks" [nzMax]="4"></nz-slider>
-                            <i nz-icon nzType="smile" [class.icon-highlight]="nextHighLight"></i>
+                        <div>
+                            <div class="libelle">
+                                Adaptabilité de la mission
+                            </div>
+                            <div>
+                                <div class="icon-wrapper test-class">
+                                    <i nz-icon nzType="frown" [class.icon-highlight]="preHighLight"></i>
+                                    <nz-slider [nzMin]="1" [nzMarks]="marks" [nzMax]="4"></nz-slider>
+                                    <i nz-icon nzType="smile" [class.icon-highlight]="nextHighLight"></i>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="libelle">
-                        Commentaire supplémentaire
-                    </div>
-                    <div>
-                        <textarea style="width: 100%;" name="" id="" rows="3"></textarea>
-                    </div>
-                    <div class="indication">
-                        Vous pouvez ajouter un commentaire supplémentaire si vous le souhaitez.
-                    </div>
-                </div>
-            </div>
-            <div class="contenu-boutons" style="">
-                <button (click)="passerAEtape3()" nz-button nzType="primary">Terminer</button> &nbsp;
-                <button nz-button>Enregistrer et finir plus tard</button>
-            </div>
+                        <div>
+                            <div class="libelle">
+                                Capacité à monter en compétences
+                            </div>
+                            <div>
+                                <div class="icon-wrapper test-class">
+                                    <i nz-icon nzType="frown" [class.icon-highlight]="preHighLight"></i>
+                                    <nz-slider [nzMin]="1" [nzMarks]="marks" [nzMax]="4"></nz-slider>
+                                    <i nz-icon nzType="smile" [class.icon-highlight]="nextHighLight"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="libelle">
+                                Atteinte des objectifs chez le client
+                            </div>
+                            <div>
+                                <div class="icon-wrapper test-class">
+                                    <i nz-icon nzType="frown" [class.icon-highlight]="preHighLight"></i>
+                                    <nz-slider [nzMin]="1" [nzMarks]="marks" [nzMax]="4"></nz-slider>
+                                    <i nz-icon nzType="smile" [class.icon-highlight]="nextHighLight"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="libelle">
+                                Commentaire supplémentaire
+                            </div>
+                            <div>
+                                <textarea style="width: 100%;" name="" id="" rows="3"></textarea>
+                            </div>
 
+                            <div nz-row>
+                                <div nzSpan="18">
+                                    <div class="indication2">
+                                        Vous pouvez ajouter un commentaire supplémentaire si vous le souhaitez.
+                                    </div>
+                                </div>
+                                <div nzSpan="6">
+                                    <div class="indication2" style="text-align: right;">
+                                        0/150
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contenu-boutons" style="">
+                    <button (click)="passerAEtape3()" nz-button nzType="primary">Terminer</button> &nbsp;
+                    <button nz-button>Enregistrer et finir plus tard</button>
+                </div>
+            </div>
         </div>
     </div>
     <div style="height: 100px">

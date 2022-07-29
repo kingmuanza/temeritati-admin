@@ -13,6 +13,7 @@ export class AppComponent {
   url = "";
   afficherMenu = true;
   isEntreprise = true;
+  isEvaluations = true;
 
 
   constructor(

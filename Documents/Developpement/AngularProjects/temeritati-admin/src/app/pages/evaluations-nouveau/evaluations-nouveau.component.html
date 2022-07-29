@@ -13,7 +13,11 @@
 
     <div class="shadow-1 contenu">
         <div class="mi-titre">
-            Bienvenue au sein de cette évaluation
+            <nz-steps [nzCurrent]="0">
+                <nz-step nzTitle="Résumé de la mission"></nz-step>
+                <nz-step nzTitle="Objectifs de la mission"></nz-step>
+                <nz-step nzTitle="Auto-évaluation"></nz-step>
+            </nz-steps>
         </div>
         <div class="contenu-inner" style="font-size: 1.1em;">
 

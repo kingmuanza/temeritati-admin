@@ -21,17 +21,40 @@ export class EvaluationsComponent implements OnInit {
       priority: false
     },
     {
-      title: 'Statut',
+      title: 'Consultant',
       compare: null,
       priority: 3
     },
     {
-      title: 'Date de mise en ligne',
+      title: 'Type d’évaluation',
       compare: null,
       priority: 2
     },
     {
-      title: 'Date limite d’envoi',
+      title: 'Date d’envoi',
+      compare: null,
+      priority: 1
+    },
+    {
+      title: 'Actions',
+      compare: null,
+      priority: 1
+    }
+  ];
+
+  listOfColumn2 = [
+    {
+      title: 'Évaluations ',
+      compare: null,
+      priority: false
+    },
+    {
+      title: 'Consultant',
+      compare: null,
+      priority: 3
+    },
+    {
+      title: 'Date de création',
       compare: null,
       priority: 1
     },
@@ -45,9 +68,16 @@ export class EvaluationsComponent implements OnInit {
   listOfData = [
     {
       name: 'FOR_04_22_2',
-      chinese: 'Non démarrée',
-      math: '11/06/2022',
-      math2: '26/06/2022',
+      chinese: 'Dayan Mammou',
+      math: 'Fin de mission',
+      math2: '11/06/2022',
+      english: 'Saisir'
+    },
+    {
+      name: 'FOR_04_22_1',
+      chinese: 'Sulman Shabbir',
+      math: 'Forfrait cadre',
+      math2: '02/04/2022',
       english: 'Saisir'
     },
   ];
@@ -55,9 +85,10 @@ export class EvaluationsComponent implements OnInit {
 
   listOfDataEnAttente = [
     {
-      name: 'Décembre 2021',
-      chinese: 'Fortuneo',
-      math: 'Audit IT',
+      name: 'FOR_04_22_1',
+      chinese: 'Sulman Shabbir',
+      math: 'Forfrait cadre',
+      math2: '02/04/2022',
       english: 'Saisir'
     },
   ];

@@ -49,6 +49,7 @@ import { FacturesComponent } from './pages/factures/factures.component';
 import { CongesComponent } from './pages/conges/conges.component';
 import { FacturesDetailComponent } from './pages/factures-detail/factures-detail.component';
 import { CongesDetailComponent } from './pages/conges-detail/conges-detail.component';
+import { AjouterCommentaireComponent } from './_composants/ajouter-commentaire/ajouter-commentaire.component';
 
 registerLocaleData(fr);
 
@@ -83,7 +84,8 @@ const ngZorroConfig: NzConfig = {
     FacturesComponent,
     CongesComponent,
     FacturesDetailComponent,
-    CongesDetailComponent
+    CongesDetailComponent,
+    AjouterCommentaireComponent
   ],
   imports: [
     BrowserModule,
