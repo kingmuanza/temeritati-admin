@@ -1,42 +1,30 @@
 <div class="bg">
     <div style="margin-top: 20px; margin-left: 20px;">
         <nz-breadcrumb>
-            <nz-breadcrumb-item>Mes CRA</nz-breadcrumb-item>
+            <nz-breadcrumb-item>CRA</nz-breadcrumb-item>
             <nz-breadcrumb-item>
-                <a>En cours</a>
+                <a>Toutes</a>
             </nz-breadcrumb-item>
 
         </nz-breadcrumb>
-        <div class="titre">Mes CRA</div>
+        <div class="titre">CRA</div>
         <div class="soustitre">
-            Vous pouvez renseigner vos demandes de jours de congés dans ce calendrier, un retour vous sera fait une fois ceux-ci envoyés à la direction.
+            Retrouvez ici l’ensemble des CRA de vos missions en cours, en attente de validation et autres. Une fois ceux-ci compléter cliquez sur envoyer pour les transmettre à votre manager.
         </div>
     </div>
 
     <div style="margin-top: 20px">
         <ul nz-menu nzMode="horizontal">
-            <li nz-menu-item (click)="selectionner('aSaisir')" [nzSelected]="aSaisir">
-                <span class="menu-design">A saisir</span>
+            <li nz-menu-item (click)="selectionner('validees')" [nzSelected]="validees">
+                <span class="menu-design">Validées</span>
                 <span class="badge">
-                    02
-                </span>
-            </li>
-            <li nz-menu-item (click)="selectionner('enAttente')" [nzSelected]="enAttente">
-                <span class="menu-design">En attente de justification</span>
-                <span class="badge">
-                    01
+                    03
                 </span>
             </li>
             <li nz-menu-item (click)="selectionner('rejetees')" [nzSelected]="rejetees">
                 <span class="menu-design">Rejetées</span>
                 <span class="badge">
                     00
-                </span>
-            </li>
-            <li nz-menu-item (click)="selectionner('validees')" [nzSelected]="validees">
-                <span class="menu-design">Validées</span>
-                <span class="badge">
-                    03
                 </span>
             </li>
             <li nz-menu-item (click)="selectionner('archivees')" [nzSelected]="archivees">
@@ -65,8 +53,8 @@
                                 </nz-input-group>
                                 <ng-template #prefixTemplateUser>
                                     <button nz-button nzType="primary" nzSearch>
-                                    <i nz-icon nzType="search"></i>
-                                </button>
+                                        <i nz-icon nzType="search"></i>
+                                    </button>
                                 </ng-template>
                             </div>
                         </div>
@@ -103,7 +91,7 @@
                             <td>{{ data.chinese }}</td>
                             <td>{{ data.math }}</td>
                             <td>
-                                <a routerLink="/cra/detail">Saisir</a>
+                                <a routerLink="/cra/detail">Modifier</a>
                             </td>
                         </tr>
                     </tbody>
@@ -124,8 +112,8 @@
                                 </nz-input-group>
                                 <ng-template #prefixTemplateUser>
                                     <button nz-button nzType="primary" nzSearch>
-                                    <i nz-icon nzType="search"></i>
-                                </button>
+                                        <i nz-icon nzType="search"></i>
+                                    </button>
                                 </ng-template>
                             </div>
                         </div>
@@ -183,8 +171,8 @@
                                 </nz-input-group>
                                 <ng-template #prefixTemplateUser>
                                     <button nz-button nzType="primary" nzSearch>
-                                    <i nz-icon nzType="search"></i>
-                                </button>
+                                        <i nz-icon nzType="search"></i>
+                                    </button>
                                 </ng-template>
                             </div>
                         </div>
@@ -239,13 +227,13 @@
                             <button nz-button nzType="primary" style="width: 90%;">
                                 <i nz-icon nzType="container" nzTheme="outline"></i>
                                 Archiver
-                              </button>
+                            </button>
                         </div>
                         <div nz-col nzSpan="2">
                             <button nz-button style="width: 90%;">
                                 <i nz-icon nzType="download"></i>
                                 Télécharger
-                              </button>
+                            </button>
                         </div>
                         <div nz-col nzSpan="4">
                             <div>
@@ -254,8 +242,8 @@
                                 </nz-input-group>
                                 <ng-template #prefixTemplateUser>
                                     <button nz-button nzType="primary" nzSearch>
-                                    <i nz-icon nzType="search"></i>
-                                </button>
+                                        <i nz-icon nzType="search"></i>
+                                    </button>
                                 </ng-template>
                             </div>
                         </div>
@@ -292,9 +280,7 @@
                             <td>{{ data.chinese }}</td>
                             <td>{{ data.math }}</td>
                             <td>
-                                <a routerLink="/cra/detail">Voir</a> &nbsp; &nbsp;
-                                <a href="#">Télécharger</a> &nbsp; &nbsp;
-                                <a href="#">Archiver</a>
+                                <a routerLink="/cra/detail">Modifier</a> &nbsp; &nbsp;
                             </td>
                         </tr>
                     </tbody>
@@ -312,7 +298,7 @@
                             <button nz-button nzType="primary" style="width: 90%;">
                                 <i nz-icon nzType="download"></i>
                                 Télécharger
-                              </button>
+                            </button>
                         </div>
                         <div nz-col nzSpan="4">
                             <div>
@@ -321,8 +307,8 @@
                                 </nz-input-group>
                                 <ng-template #prefixTemplateUser>
                                     <button nz-button nzType="primary" nzSearch>
-                                    <i nz-icon nzType="search"></i>
-                                </button>
+                                        <i nz-icon nzType="search"></i>
+                                    </button>
                                 </ng-template>
                             </div>
                         </div>

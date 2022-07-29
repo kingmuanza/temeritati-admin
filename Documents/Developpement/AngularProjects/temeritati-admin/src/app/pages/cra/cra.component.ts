@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CraComponent implements OnInit {
 
-  aSaisir = true;
+  aSaisir = false;
   enAttente = false;
   rejetees = false;
-  validees = false;
+  validees = true;
   archivees = false;
 
   listOfColumn = [

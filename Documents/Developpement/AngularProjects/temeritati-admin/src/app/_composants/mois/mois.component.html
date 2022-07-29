@@ -23,10 +23,12 @@
     </div>
     <div class="ligne">
         <div nz-row>
-            <div *ngFor="let item of items;" nz-col nzFlex="1">
+            <div *ngFor="let item of items; let i=index" nz-col nzFlex="1">
                 <div [ngClass]="{'weekend': item > 5}">
                     <b style="font-size: 1.1em;">
-                        &nbsp;
+                        <span class="rose"  *ngIf="i < 5">
+                            0.5
+                        </span>
                     </b>
                 </div>
             </div>
@@ -36,10 +38,12 @@
     <div class="ligne">
 
         <div nz-row>
-            <div *ngFor="let item of items;" nz-col nzFlex="1">
+            <div *ngFor="let item of items; let i=index" nz-col nzFlex="1">
                 <div [ngClass]="{'weekend': item > 5}">
                     <b style="font-size: 1.1em;">
-                        &nbsp;
+                        <span class="rose" *ngIf="i < 5">
+                            0.5
+                        </span>
                     </b>
                 </div>
             </div>

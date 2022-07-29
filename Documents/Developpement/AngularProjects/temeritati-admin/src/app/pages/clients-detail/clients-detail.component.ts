@@ -14,9 +14,33 @@ export class ClientsDetailComponent implements OnInit {
   validees = false;
   archivees = false;
 
-  listOfColumn = [
+  listOfColumnCRA = [
     {
-      title: 'Client ',
+      title: 'Mois',
+      compare: null,
+      priority: false
+    },
+    {
+      title: 'Client',
+      compare: null,
+      priority: 3
+    },
+    {
+      title: 'Mission',
+      compare: null,
+      priority: 2
+    },
+    {
+      title: 'Action',
+      compare: null,
+      priority: 1
+    }
+  ];
+
+  
+  listOfColumnFacture = [
+    {
+      title: 'Factures ',
       compare: null,
       priority: false
     },
@@ -26,12 +50,12 @@ export class ClientsDetailComponent implements OnInit {
       priority: 3
     },
     {
-      title: 'Date de début',
+      title: 'Consultant',
       compare: null,
       priority: 2
     },
     {
-      title: 'Nombre de consultants en mission',
+      title: 'Client',
       compare: null,
       priority: 1
     },
@@ -42,7 +66,7 @@ export class ClientsDetailComponent implements OnInit {
     }
   ];
 
-  listOfData = [
+  listOfDataFacture = [
     {
       name: 'Fortuneo',
       chinese: 'Audit IT',
@@ -56,6 +80,36 @@ export class ClientsDetailComponent implements OnInit {
       math: '15/04/2022',
       math2: '1',
       english: 'Saisir'
+    },
+  ];
+
+  listOfDataValidees = [
+    {
+      name: 'Janvier 2022',
+      chinese: 'Fortuneo',
+      math: 'Audit IT',
+      english: 'Saisir'
+    },
+    {
+      name: 'Novembre 2021',
+      chinese: 'Fortuneo',
+      math: 'Audit IT',
+      english: 'Saisir'
+    },
+    {
+      name: 'Octobre 2021',
+      chinese: 'Fortuneo',
+      math: 'Audit IT',
+      english: 'Saisir'
+    },
+  ];
+
+  listOfData = [
+    {
+      name: 'FOR_04_22_16',
+      chinese: 'Audit IT',
+      math: 'Dayan Mammou',
+      math2: 'Fortuneo',
     },
   ];
 
