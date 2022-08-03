@@ -37,7 +37,7 @@
                     </div>
                     <div nz-col nzSpan="8">
                         <b>Justificatif</b> :
-                        <a href="#">CRA_signé_Fortuneo.pdf</a>
+                        <a href="#">{{getNomFichier(fichier)}}</a>
                     </div>
                 </div>
                 <div nz-row style="margin-top: 10px">
@@ -51,13 +51,14 @@
                 </div>
             </div>
             <div nz-col nzSpan="12" style="text-align: right;">
-                <button nz-button disabled style="margin-left: 20px;">
+                <button (click)="valider()" nz-button nzType="primary" [disabled]="!fichier" style="margin-left: 20px;">
                     <i nz-icon nzType="check"></i>
                     Valider
                 </button>
-                <button nz-button nzType="primary" style="margin-left: 20px;">
+                <button (click)="getFichier()" nz-button nzType="primary" style="margin-left: 20px;">
                     <i nz-icon nzType="file"></i>
                     Attacher un justificatif
+                    <input #inputFile type="file" [(ngModel)]="fichier"  (change)="onSelectFile($event)" style="display: none;">
                 </button>
                 <button nz-button style="margin-left: 20px;">
                     <i nz-icon nzType="download"></i>

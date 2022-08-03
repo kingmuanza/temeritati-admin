@@ -21,9 +21,9 @@ export class CongesDetailComponent implements OnInit {
       priority: false
     },
     {
-      title: 'Types de congés',
+      title: 'Nombre total',
       compare: null,
-      priority: 3
+      priority: 1
     },
     {
       title: 'Demandes',
@@ -31,9 +31,9 @@ export class CongesDetailComponent implements OnInit {
       priority: 2
     },
     {
-      title: 'Nombre total',
+      title: 'Types de congés',
       compare: null,
-      priority: 1
+      priority: 3
     },
     {
       title: 'Nombre restant',
@@ -54,10 +54,10 @@ export class CongesDetailComponent implements OnInit {
   typesConges = [
     { icone: 'global', libelle: 'Congés payés', demandes: 1, total: 7, restants: 3},
     { icone: 'fork', libelle: 'Congés maladie', demandes: 1, total: 7, restants: 3},
-    { icone: 'home', libelle: 'Récupération', demandes: 1, total: 7, restants: 3},
+    { icone: 'home', libelle: 'Sans solde', demandes: 1, total: 7, restants: 3},
     { icone: 'global', libelle: 'Congés payés', demandes: 1, total: 7, restants: 3},
     { icone: 'fork', libelle: 'Congés maladie', demandes: 1, total: 7, restants: 3},
-    { icone: 'home', libelle: 'Récupération', demandes: 1, total: 7, restants: 3},
+    { icone: 'home', libelle: 'Sans solde', demandes: 1, total: 7, restants: 3},
   ]
 
   conges = [

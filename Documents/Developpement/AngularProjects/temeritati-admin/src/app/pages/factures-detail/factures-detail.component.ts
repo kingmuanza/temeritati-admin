@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FacturesDetailComponent implements OnInit {
 
+  switchValue = false;
+  
   aSaisir = true;
   enAttente = false;
   rejetees = false;

@@ -69,22 +69,6 @@
                             <td>
                                 <div class="conge-type" *ngFor="let item of typesConges; let i=index">
                                     <div nz-row>
-                                        <div nz-col nzFlex="40px">
-                                            <div class="conge-icone">
-                                                <i nz-icon [nzType]="item.icone" nzTheme="outline"></i>
-                                            </div>
-                                        </div>
-                                        <div nz-col nzFlex="auto">
-                                            <div class="conge-libelle">
-                                                {{item.libelle}}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="conge-type" *ngFor="let item of typesConges; let i=index">
-                                    <div nz-row>
                                         <div nz-col nzFlex="auto">
                                             <div class="conge-libelle">
                                                 {{item.demandes}}
@@ -104,6 +88,23 @@
                                     </div>
                                 </div>
                             </td>
+                            <td>
+                                <div class="conge-type" *ngFor="let item of typesConges; let i=index">
+                                    <div nz-row>
+                                        <div nz-col nzFlex="40px">
+                                            <div class="conge-icone">
+                                                <i nz-icon [nzType]="item.icone" nzTheme="outline"></i>
+                                            </div>
+                                        </div>
+                                        <div nz-col nzFlex="auto">
+                                            <div class="conge-libelle">
+                                                {{item.libelle}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+
                             <td>
                                 <div class="conge-type" *ngFor="let item of typesConges; let i=index">
                                     <div nz-row>

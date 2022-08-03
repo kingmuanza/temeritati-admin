@@ -24,6 +24,7 @@ import { NzStepsModule } from 'ng-zorro-antd/steps';
 import { NzSliderModule } from 'ng-zorro-antd/slider';
 import { NzCollapseModule } from 'ng-zorro-antd/collapse';
 import { NzTagModule } from 'ng-zorro-antd/tag';
+import { NzSwitchModule } from 'ng-zorro-antd/switch';
 
 import { ProfilComponent } from './pages/profil/profil.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -109,6 +110,7 @@ const ngZorroConfig: NzConfig = {
     NzSliderModule,
     NzCollapseModule,
     NzTagModule,
+    NzSwitchModule,
   ],
   providers: [
     { provide: NZ_I18N, useValue: fr_FR },
