@@ -9,6 +9,7 @@ import { ConsultantsDetailComponent } from './pages/consultants-detail/consultan
 import { ConsultantsComponent } from './pages/consultants/consultants.component';
 import { CraDetailComponent } from './pages/cra-detail/cra-detail.component';
 import { CraComponent } from './pages/cra/cra.component';
+import { DocumentsComponent } from './pages/documents/documents.component';
 import { EvaluationsNouveauComponent } from './pages/evaluations-nouveau/evaluations-nouveau.component';
 import { EvaluationsResumeComponent } from './pages/evaluations-resume/evaluations-resume.component';
 import { EvaluationsComponent } from './pages/evaluations/evaluations.component';
@@ -26,6 +27,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'login/first', component: Login2Component },
   { path: 'profil', component: ProfilComponent },
+
+  { path: 'documents-contractuels', component: DocumentsComponent },
 
   { path: 'factures', component: FacturesComponent },
   { path: 'factures/detail', component: FacturesDetailComponent },

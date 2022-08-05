@@ -84,4 +84,8 @@ export class AppComponent {
   consultants() {
     this.router.navigate(['/consultants']);
   }
+
+  documents() {
+    this.router.navigate(['/documents-contractuels']);
+  }
 }

@@ -2,69 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-clients-detail',
-  templateUrl: './clients-detail.component.html',
-  styleUrls: ['./clients-detail.component.scss']
+  selector: 'app-documents',
+  templateUrl: './documents.component.html',
+  styleUrls: ['./documents.component.scss']
 })
-export class ClientsDetailComponent implements OnInit {
+export class DocumentsComponent implements OnInit {
 
-  aSaisir = true;
+  aSaisir = false;
   enAttente = false;
   rejetees = false;
-  validees = false;
+  validees = true;
   archivees = false;
-
-  listOfColumnCRA = [
-    {
-      title: 'Mois',
-      compare: null,
-      priority: false
-    },
-    {
-      title: 'Client',
-      compare: null,
-      priority: 3
-    },
-    {
-      title: 'Mission',
-      compare: null,
-      priority: 2
-    },
-    {
-      title: 'Action',
-      compare: null,
-      priority: 1
-    }
-  ];
-
-  
-  listOfColumnFacture = [
-    {
-      title: 'Factures ',
-      compare: null,
-      priority: false
-    },
-    {
-      title: 'Mission',
-      compare: null,
-      priority: 3
-    },
-    {
-      title: 'Consultant',
-      compare: null,
-      priority: 2
-    },
-    {
-      title: 'Client',
-      compare: null,
-      priority: 1
-    },
-    {
-      title: 'Actions',
-      compare: null,
-      priority: 1
-    }
-  ];
 
   listOfColumnDocuments = [
     {
@@ -107,36 +55,6 @@ export class ClientsDetailComponent implements OnInit {
       math: '15/04/2022',
       math2: '1',
       english: 'Saisir'
-    },
-  ];
-
-  listOfDataValidees = [
-    {
-      name: 'Janvier 2022',
-      chinese: 'Fortuneo',
-      math: 'Audit IT',
-      english: 'Saisir'
-    },
-    {
-      name: 'Novembre 2021',
-      chinese: 'Fortuneo',
-      math: 'Audit IT',
-      english: 'Saisir'
-    },
-    {
-      name: 'Octobre 2021',
-      chinese: 'Fortuneo',
-      math: 'Audit IT',
-      english: 'Saisir'
-    },
-  ];
-
-  listOfData = [
-    {
-      name: 'FOR_04_22_16',
-      chinese: 'Audit IT',
-      math: 'Dayan Mammou',
-      math2: 'Fortuneo',
     },
   ];
 
