@@ -1,0 +1,187 @@
+<div class="bg">
+    <div style="margin-top: 20px; margin-left: 20px;">
+        <nz-breadcrumb>
+            <nz-breadcrumb-item>Congés</nz-breadcrumb-item>
+            <nz-breadcrumb-item>
+                <a>...</a>
+            </nz-breadcrumb-item>
+
+        </nz-breadcrumb>
+        <div class="titre">Congés</div>
+        <div class="soustitre">
+            ....
+        </div>
+    </div>
+
+    <div style="margin-top: 20px">
+        <ul nz-menu nzMode="horizontal">
+            <li nz-menu-item (click)="selectionner('aSaisir')" [nzSelected]="aSaisir">
+                <span class="menu-design">Congés</span>
+                <span class="badge">
+                    03
+                </span>
+            </li>
+            <li nz-menu-item (click)="selectionner('enAttente')" [nzSelected]="enAttente">
+                <span class="menu-design">Validés</span>
+                <span class="badge">
+                    02
+                </span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="contenu">
+        <div *ngIf="aSaisir">
+            <div style="margin:40px">
+                <div style="margin-bottom:20px">
+
+                </div>
+                <nz-table #sortTable [nzData]="listOfData" nzTableLayout="fixed">
+                    <thead>
+                        <tr>
+
+                            <th *ngFor="let column of listOfColumn" [nzSortFn]="column.compare" [nzSortPriority]="column.priority">
+                                <b>
+                                    {{ column.title }}
+                                </b>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let data of conges" class="cliquable">
+                            <td>
+                                <div nz-row>
+                                    <div nz-col nzFlex="60px">
+                                        <div class="pp" [ngStyle]="{ 'background-image': 'url(' + data.user.pp + ')'}">
+
+                                        </div>
+                                    </div>
+                                    <div nz-col nzFlex="auto">
+                                        <div class="noms">
+                                            {{data.user.nom}}
+                                        </div>
+                                        <div>
+                                            {{data.user.statut}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="conge-type" *ngFor="let item of typesConges; let i=index">
+                                    <div nz-row>
+                                        <div nz-col nzFlex="auto">
+                                            <div class="conge-libelle">
+                                                {{item.demandes}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="conge-type" *ngFor="let item of typesConges; let i=index">
+                                    <div nz-row>
+                                        <div nz-col nzFlex="auto">
+                                            <div class="conge-libelle">
+                                                {{item.total}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="conge-type" *ngFor="let item of typesConges; let i=index">
+                                    <div nz-row>
+                                        <div nz-col nzFlex="40px">
+                                            <div class="conge-icone">
+                                                <i nz-icon [nzType]="item.icone" nzTheme="outline"></i>
+                                            </div>
+                                        </div>
+                                        <div nz-col nzFlex="auto">
+                                            <div class="conge-libelle">
+                                                {{item.libelle}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td>
+                                <div class="conge-type" *ngFor="let item of typesConges; let i=index">
+                                    <div nz-row>
+                                        <div nz-col nzFlex="auto">
+                                            <div class="conge-libelle">
+                                                {{item.restants}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </nz-table>
+            </div>
+        </div>
+        <div *ngIf="enAttente">
+            <div style="margin:40px">
+                <div style="margin-bottom:20px">
+                    <div nz-row>
+                        <div nz-col nzSpan="16">
+
+                        </div>
+                        <div nz-col nzSpan="4">
+                            <div>
+                                <nz-input-group nzSearch [nzAddOnAfter]="prefixTemplateUser">
+                                    <input type="text" nz-input placeholder="Rechercher une évaluation" />
+                                </nz-input-group>
+                                <ng-template #prefixTemplateUser>
+                                    <button nz-button nzType="primary" nzSearch>
+                                        <i nz-icon nzType="search"></i>
+                                    </button>
+                                </ng-template>
+                            </div>
+                        </div>
+                        <div nz-col nzSpan="4">
+                            <div style="margin-left: 20px">
+                                <nz-input-group nzSearch [nzSuffix]="prefixTemplateUser2">
+                                    <input type="text" nz-input placeholder="Chercher une date" />
+                                </nz-input-group>
+                                <ng-template #prefixTemplateUser2>
+
+                                    <i nz-icon nzType="calendar" style="color: #F759AB"></i>
+
+                                </ng-template>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <nz-table #sortTable [nzData]="listOfData" nzTableLayout="fixed">
+                    <thead>
+                        <tr>
+                            <th style="width: 80px;" [nzChecked]="false"></th>
+                            <th *ngFor="let column of listOfColumn" [nzSortFn]="column.compare" [nzSortPriority]="column.priority">
+                                <b>
+                                    {{ column.title }}
+                                </b>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let data of sortTable.data">
+                            <td style="width: 80px;" [nzChecked]="false"></td>
+                            <td>{{ data.name }}</td>
+                            <td>{{ data.chinese }}</td>
+                            <td>{{ data.math }}</td>
+                            <td>{{ data.math2 }}</td>
+                            <td>
+                                <a routerLink="/factures/detail">Modifier</a> &nbsp;&nbsp;
+                                <a routerLink="/factures/detail">Archiver</a> &nbsp;&nbsp;
+                            </td>
+                        </tr>
+                    </tbody>
+                </nz-table>
+            </div>
+        </div>
+    </div>
+
+</div>

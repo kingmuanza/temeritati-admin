@@ -1,0 +1,47 @@
+.ligne {
+    position: relative;
+    line-height: 65px;
+    text-align: center;
+    height: 65px;
+    border-bottom: 1px solid rgb(245, 245, 245);
+    &.primaire {
+        background-color: #F759AB;
+        color: white;
+        border-radius: 2px;
+    }
+    &.grise {
+        background: #BBBBBB;
+        color: white;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    &.blanche {
+        background-color: white;
+        color: #747272;
+        border-top-left-radius: 10px;
+    }
+}
+
+.mois {
+    margin-left: 10px;
+    margin-right: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 0.9em;
+}
+
+.weekend {
+    background-color: rgb(245, 245, 245);
+}
+
+.rose {
+    color: #F759AB;
+}
+
+.jaune {
+    color: #F18F01;
+}
+
+.bleu {
+    color: #597EF7;
+}

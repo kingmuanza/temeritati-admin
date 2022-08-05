@@ -1,0 +1,95 @@
+.titre {
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 33px;
+    line-height: 38px;
+    /* identical to box height, or 115% */
+    /* Character/Title .85 */
+    color: rgba(0, 0, 0, 0.85);
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    height: 38px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.soustitre {
+    /* IBM/regular/16pt */
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    display: flex;
+    align-items: flex-end;
+    /* grey 1 */
+    color: #747272;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.badge {
+    background-color: #ddd;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 8px;
+    font-weight: 100;
+    font-size: 0.9em;
+    opacity: 0.5;
+}
+
+.menu-design {
+    margin-right: 5px;
+    font-size: 1.2em;
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+
+th {
+    font-weight: bold;
+}
+
+.bg {
+    background-image: url('../../../assets/img/bg.png');
+    background-size: cover;
+    background-position: bottom right;
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+
+.mission-titre {
+    margin-top: 20px;
+    /* IBM/semibold/16pt */
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    display: flex;
+    align-items: center;
+    /* Character/Title .85 */
+    color: rgba(0, 0, 0, 0.85);
+}
+
+.mission-valeur {
+    margin-top: 10px;
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    display: flex;
+    align-items: center;
+    /* Character/Title .85 */
+    color: rgba(0, 0, 0, 0.85);
+}

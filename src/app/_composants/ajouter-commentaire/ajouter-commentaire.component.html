@@ -1,0 +1,18 @@
+<div *ngIf="!ajouterCommentaireRole">
+
+    <a (click)="commenter()" class="bouton-commentaire" nz-button nzType="link" style="">
+        <i nz-icon style="color: #F759AB" nzType="comment"></i> Ajouter un commentaire
+    </a>
+</div>
+
+<div *ngIf="ajouterCommentaireRole">
+    <div class="libelle-commentaire">
+        {{libelle}}
+    </div>
+    <div>
+        <input nz-input [(ngModel)]="commentaire" type="text" style="width: 100%;">
+    </div>
+    <div class="indication" style="text-align: right;">
+        {{commentaire.length}}/100
+    </div>
+</div>

@@ -1,0 +1,134 @@
+<div class="bg">
+    <div style="margin-top: 20px; margin-left: 20px;">
+        <nz-breadcrumb>
+            <nz-breadcrumb-item>Factures</nz-breadcrumb-item>
+            <nz-breadcrumb-item>
+                <a>FOR_020422_16</a>
+            </nz-breadcrumb-item>
+
+        </nz-breadcrumb>
+        <div class="titre">Facture N°FOR_020422_16</div>
+        <div class="soustitre">
+            Vous pouvez modifier les informations de votre facture ici
+        </div>
+    </div>
+
+    <div style="margin-top: 20px; margin-bottom:20px; border-bottom: 1px solid #eee;">
+
+    </div>
+
+    <div class="contenu">
+        <div *ngIf="aSaisir">
+            <div style="margin:40px">
+                <div style="margin-bottom:20px">
+                    <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24}">
+                        <div nz-col nzSpan="16">
+
+                        </div>
+                        <div nz-col nzSpan="2">
+                            <button nz-button nzType="primary" style="width: 100%;">
+                                <i nz-icon nzType="send" nzTheme="outline"></i>
+                                Envoyer
+                            </button>
+                        </div>
+                        <div nz-col nzSpan="4">
+                            <button nz-button style="width: 100%;">
+                                <i nz-icon nzType="save" nzTheme="outline"></i>
+                                Enregistrer pour plus tard
+                            </button>
+                        </div>
+                        <div nz-col nzSpan="2">
+                            <button nz-button style="width: 100%;">
+                                <i nz-icon nzType="close-circle" nzTheme="outline"></i>
+                                Fermer
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24}" style="margin-top: 40px">
+                    <div nz-col nzSpan="8">
+                        <div class="libelle">Référence de la mission</div>
+                        <nz-input-group>
+                            <input type="text" nz-input placeholder="Example" />
+                        </nz-input-group>
+                    </div>
+                    <div nz-col nzSpan="8">
+                        <div class="libelle">Client</div>
+                        <nz-input-group>
+                            <input type="text" nz-input placeholder="Example" />
+                        </nz-input-group>
+                    </div>
+                    <div nz-col nzSpan="8">
+                        <div class="libelle">Société</div>
+                        <nz-input-group>
+                            <input type="text" nz-input placeholder="Example" />
+                        </nz-input-group>
+                    </div>
+                </div>
+                <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24}" style="margin-top: 20px">
+                    <div nz-col nzFlex="1">
+                        <div class="libelle">Consultant</div>
+                        <nz-input-group>
+                            <input type="text" nz-input placeholder="Example" />
+                        </nz-input-group>
+                    </div>
+                    <div nz-col nzFlex="1">
+                        <div class="libelle">Mois</div>
+                        <nz-input-group>
+                            <input type="text" nz-input placeholder="Example" />
+                        </nz-input-group>
+                    </div>
+                    <div nz-col nzFlex="1">
+                        <div class="libelle">TJM</div>
+                        <nz-input-group>
+                            <input type="text" nz-input placeholder="Example" />
+                        </nz-input-group>
+                    </div>
+                    <div nz-col nzFlex="1">
+                        <div class="libelle">Nb de jours travaillés</div>
+                        <nz-input-group>
+                            <input type="text" nz-input placeholder="Example" />
+                        </nz-input-group>
+                    </div>
+                    <div nz-col nzFlex="1">
+                        <div class="libelle">Montant HT associé</div>
+                        <nz-input-group>
+                            <input type="text" nz-input placeholder="Example" />
+                        </nz-input-group>
+
+                        <div style="margin-top: 10px; margin-bottom: 10px;">
+                            <nz-switch [(ngModel)]="switchValue" nzCheckedChildren="TVA applicable" nzUnCheckedChildren="TVA non applicable"></nz-switch>
+                        </div>
+
+
+                        <div class="libelle">Montant TTC </div>
+                        <nz-input-group>
+                            <input readonly type="text" nz-input placeholder="Example" />
+                        </nz-input-group>
+
+                    </div>
+                </div>
+                <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24}" style="margin-top: 40px">
+                    <div nz-col nzSpan="24">
+
+                        <div class="libelle">
+                            Prévisualiser la facture
+                        </div>
+                        <p class="mission-valeur" style="display: none;">
+                            <button nz-button>
+                                <i nz-icon nzType="upload"></i>
+                                Importer
+                            </button>
+                        </p>
+                        <p class="mission-valeur">
+                            <i nz-icon nzType="link"></i>&nbsp;&nbsp;
+                            <a style="margin-left: 10px; margin-right: 40px;" href="#">Facture_Fortuneo_04_22_16.pdf</a>&nbsp;&nbsp;
+                            <i nz-icon nzType="delete"></i>&nbsp;&nbsp;
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

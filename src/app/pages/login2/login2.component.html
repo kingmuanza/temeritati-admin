@@ -1,0 +1,58 @@
+<div class="login-container">
+    <div class="login-box">
+        <div>
+            <div class="dv-login-title">
+                <img src="../../../assets/img/small-logo-black.png" />
+                <span class="title-text">Temeritati</span>
+            </div>
+        </div>
+
+        <div>
+            <div class="login-sous-titre">
+                <p *ngIf="!showEnregistrerMessage">Première connexion : <br> configurer votre mot de passe</p>
+                <p *ngIf="showEnregistrerMessage">
+                    Votre mot de passe est à présent enregistrer. <br> Bienvenue sur la plateforme de gestion de CRA de Temeritati. Merci pour votre inscription !
+                </p>
+            </div>
+        </div>
+
+        <div>
+            <div class="login-form">
+                <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+                    <nz-form-item>
+                        <nz-form-control nzErrorTip="Please input your email address!">
+                            <nz-input-group>
+                                <input type="password" nz-input formControlName="passe" placeholder="Entrez un nouveau mot de passe" />
+                            </nz-input-group>
+                        </nz-form-control>
+                    </nz-form-item>
+                    <div class="message-complementaire">
+                        <div *ngIf="showErrorMessage">
+                            Votre mot de passe doit contenir au moins 6 caractères, dont une majuscule et un caractère spécial
+                        </div>
+                    </div>
+                    <nz-form-item>
+                        <nz-form-control nzErrorTip="Please input your Password!">
+                            <nz-input-group>
+                                <input type="password" nz-input formControlName="confirmation" placeholder="Confimer le mot de passe" />
+                            </nz-input-group>
+                        </nz-form-control>
+                    </nz-form-item>
+                    <div class="message-complementaire">
+                        <div *ngIf="showErrorMessage2">
+                            Les mots de passe ne sont pas identiques
+                        </div>
+                    </div>
+                    <button style="width: 100%; margin-top: 0px;" nz-button class="login-form-button login-form-margin" [nzType]="'primary'">Se connecter</button>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<app-footer>
+
+</app-footer>

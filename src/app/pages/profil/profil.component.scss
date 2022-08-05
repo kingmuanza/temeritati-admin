@@ -1,0 +1,147 @@
+.titre {
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 33px;
+    line-height: 38px;
+    /* identical to box height, or 115% */
+    /* Character/Title .85 */
+    color: rgba(0, 0, 0, 0.85);
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    height: 38px;
+    margin-top: 20px;
+}
+
+.soustitre {
+    /* IBM/regular/16pt */
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    display: flex;
+    align-items: flex-end;
+    /* grey 1 */
+    color: #747272;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.contenu {
+    height: 600px;
+    width: 1000px;
+    // background-color: #aaa;
+    margin: auto;
+    margin-top: 40px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.petit-titre {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    /* identical to box height, or 133% */
+    display: flex;
+    align-items: center;
+    /* Character/Title .85 */
+    color: rgba(0, 0, 0, 0.85);
+}
+
+label {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 157% */
+    display: flex;
+    align-items: center;
+    /* grey 1 */
+    color: #898B8D;
+}
+
+.padding {
+    padding: 20px;
+    padding: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.photo {
+    display: inline-block;
+    height: 180px;
+    width: 180px;
+    margin: auto;
+    border-radius: 100px;
+    background-color: red;
+    background-image: url('../../../assets/img/pp.jpg');
+    background-size: cover;
+}
+
+.formulaire {
+    margin-top: 40px;
+}
+
+.message {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    color: #F759AB;
+    margin-left: 20px;
+    cursor: pointer;
+    &:hover {
+        opacity: 0.9;
+    }
+}
+
+nz-select {
+    width: 100%;
+}
+
+.cv {
+    margin-top: 40px;
+    /* Neutral/2 */
+    background: #FAFAFA;
+    /* Neutral/5 */
+    border: 1px solid #D9D9D9;
+    border-radius: 2px;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 0px;
+    gap: 20px;
+    width: 395px;
+    .icone {
+        text-align: center;
+        font-size: 3rem;
+        color: #F759AB;
+    }
+    .texte {
+        text-align: center;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
+
+li.ant-menu-item.ant-menu-item-selected {
+    background-color: #FFF0F6;
+    color: #F759AB;
+    border: 0px solid #000;
+    &:after {
+        content: none;
+    }
+}
