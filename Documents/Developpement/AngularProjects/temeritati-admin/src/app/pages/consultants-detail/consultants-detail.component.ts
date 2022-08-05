@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConsultantsDetailComponent implements OnInit {
 
+  contrat = "CDI";
+  
   aSaisir = true;
   enAttente = false;
   rejetees = false;

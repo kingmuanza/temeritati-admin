@@ -287,6 +287,29 @@
                 <div class="contenu-item">
                     <div class="mois">
                         <div class="titre-petit">
+                            Type de contrat
+                        </div>
+                        <nz-radio-group [(ngModel)]="contrat" style="width: 100%;">
+                            <div nz-row style="margin-top: 20px;">
+                                <div nz-col nzFlex="1">
+                                    <label nz-radio nzValue="A">CDI</label>
+                                </div>
+                                <div nz-col nzFlex="1">
+                                    <label nz-radio nzValue="B">CDD</label>
+                                </div>
+                                <div nz-col nzFlex="1">
+                                    <label nz-radio nzValue="C">Alternant/Stagiaire</label>
+                                </div>
+                                <div nz-col nzFlex="1">
+                                    <label nz-radio nzValue="D"> Sous-traitant</label>
+                                </div>
+                            </div>
+                        </nz-radio-group>
+                    </div>
+                </div>
+                <div class="contenu-item">
+                    <div class="mois">
+                        <div class="titre-petit">
                             Période d’essai
                         </div>
                         <div nz-row>
@@ -336,13 +359,13 @@
                             <button nz-button nzType="primary" style="width: 90%;">
                                 <i nz-icon nzType="container" nzTheme="outline"></i>
                                 Archiver
-                              </button>
+                            </button>
                         </div>
                         <div nz-col nzSpan="2">
                             <button nz-button style="width: 90%;">
                                 <i nz-icon nzType="download"></i>
                                 Télécharger
-                              </button>
+                            </button>
                         </div>
                         <div nz-col nzSpan="4">
                             <div>
@@ -351,8 +374,8 @@
                                 </nz-input-group>
                                 <ng-template #prefixTemplateUser>
                                     <button nz-button nzType="primary" nzSearch>
-                                    <i nz-icon nzType="search"></i>
-                                </button>
+                                        <i nz-icon nzType="search"></i>
+                                    </button>
                                 </ng-template>
                             </div>
                         </div>
