@@ -1,0 +1,204 @@
+<div class="bg">
+    <div style="margin-top: 20px; margin-left: 20px;">
+        <nz-breadcrumb>
+            <nz-breadcrumb-item>Documents contractuels</nz-breadcrumb-item>
+            <nz-breadcrumb-item>
+                <a>Tous</a>
+            </nz-breadcrumb-item>
+
+        </nz-breadcrumb>
+        <div class="titre">Documents contractuels</div>
+        <div class="soustitre">
+            Retrouvez ici l'ensemble des documents contractuels relatifs aux missions en cours
+        </div>
+    </div>
+
+    <div style="margin-top: 20px">
+        <ul nz-menu nzMode="horizontal">
+            <li nz-menu-item (click)="selectionner('validees')" [nzSelected]="validees">
+                <span class="menu-design">A envoyer</span>
+                <span class="badge">
+                    02
+                </span>
+            </li>
+            <li nz-menu-item (click)="selectionner('archivees')" [nzSelected]="archivees">
+                <span class="menu-design">Archivés</span>
+                <span class="badge">
+                    02
+                </span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="contenu">
+        <div *ngIf="validees">
+            <div style="margin:40px">
+                <div style="margin-bottom:20px">
+                    <div nz-row>
+                        <div nz-col nzSpan="2">
+                            <button nz-button nzType="primary" style="width: 100%;">
+                                Clients
+                            </button>
+                        </div>
+                        <div nz-col nzSpan="2">
+                            <button nz-button style="width: 100%;">
+                                Sous-traitants
+                            </button>
+                        </div>
+                        <div nz-col nzSpan="10">
+
+                        </div>
+                        <div nz-col nzSpan="2">
+                            <button nz-button style="width: 90%;">
+                                <i nz-icon nzType="container" nzTheme="outline"></i>
+                                Archiver
+                            </button>
+                        </div>
+                        <div nz-col nzSpan="4">
+                            <div>
+                                <nz-input-group nzSearch [nzAddOnAfter]="prefixTemplateUser">
+                                    <input type="text" nz-input placeholder="Rechercher une facture" />
+                                </nz-input-group>
+                                <ng-template #prefixTemplateUser>
+                                    <button nz-button nzType="primary" nzSearch>
+                                        <i nz-icon nzType="search"></i>
+                                    </button>
+                                </ng-template>
+                            </div>
+                        </div>
+                        <div nz-col nzSpan="4">
+                            <div style="margin-left: 20px">
+                                <nz-input-group nzSearch [nzSuffix]="prefixTemplateUser2">
+                                    <input type="text" nz-input placeholder="Chercher un mois" />
+                                </nz-input-group>
+                                <ng-template #prefixTemplateUser2>
+
+                                    <i nz-icon nzType="calendar" style="color: #F759AB"></i>
+
+                                </ng-template>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <nz-table #sortTable [nzData]="listOfDataFacture" nzTableLayout="fixed">
+                    <thead>
+                        <tr>
+                            <th style="width: 80px;" [nzChecked]="false"></th>
+                            <th *ngFor="let column of listOfColumnDocuments" [nzSortFn]="column.compare" [nzSortPriority]="column.priority">
+                                <b>
+                                    {{ column.title }}
+                                </b>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let data of sortTable.data">
+                            <td style="width: 80px;" [nzChecked]="false"></td>
+                            <td>{{ data.name }}</td>
+                            <td>{{ data.chinese }}</td>
+                            <td>
+                                <span class="">
+                                    {{ data.math }}
+                                </span>
+                            </td>
+                            <td>
+                                <span class="">
+                                    {{ data.math2 }}
+                                </span>
+                            </td>
+                            <td>
+                                <a routerLink="/factures/detail">Modifier</a> &nbsp;&nbsp;
+                            </td>
+                        </tr>
+                    </tbody>
+                </nz-table>
+            </div>
+        </div>
+        <div *ngIf="archivees">
+            <div style="margin:40px">
+                <div style="margin-bottom:20px">
+                    <div nz-row>
+                        <div nz-col nzSpan="2">
+                            <button nz-button nzType="primary" style="width: 100%;">
+                                Clients
+                            </button>
+                        </div>
+                        <div nz-col nzSpan="2">
+                            <button nz-button style="width: 100%;">
+                                Sous-traitants
+                            </button>
+                        </div>
+                        <div nz-col nzSpan="10">
+
+                        </div>
+                        <div nz-col nzSpan="2">
+                            <button nz-button style="width: 90%;">
+                                <i nz-icon nzType="container" nzTheme="outline"></i>
+                                Archiver
+                            </button>
+                        </div>
+                        <div nz-col nzSpan="4">
+                            <div>
+                                <nz-input-group nzSearch [nzAddOnAfter]="prefixTemplateUser">
+                                    <input type="text" nz-input placeholder="Rechercher une facture" />
+                                </nz-input-group>
+                                <ng-template #prefixTemplateUser>
+                                    <button nz-button nzType="primary" nzSearch>
+                                        <i nz-icon nzType="search"></i>
+                                    </button>
+                                </ng-template>
+                            </div>
+                        </div>
+                        <div nz-col nzSpan="4">
+                            <div style="margin-left: 20px">
+                                <nz-input-group nzSearch [nzSuffix]="prefixTemplateUser2">
+                                    <input type="text" nz-input placeholder="Chercher un mois" />
+                                </nz-input-group>
+                                <ng-template #prefixTemplateUser2>
+
+                                    <i nz-icon nzType="calendar" style="color: #F759AB"></i>
+
+                                </ng-template>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <nz-table #sortTable [nzData]="listOfDataFacture" nzTableLayout="fixed">
+                    <thead>
+                        <tr>
+                            <th style="width: 80px;" [nzChecked]="false"></th>
+                            <th *ngFor="let column of listOfColumnDocuments" [nzSortFn]="column.compare" [nzSortPriority]="column.priority">
+                                <b>
+                                    {{ column.title }}
+                                </b>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let data of sortTable.data">
+                            <td style="width: 80px;" [nzChecked]="false"></td>
+                            <td>{{ data.name }}</td>
+                            <td>{{ data.chinese }}</td>
+                            <td>
+                                <span class="">
+                                    {{ data.math }}
+                                </span>
+                            </td>
+                            <td>
+                                <span class="">
+                                    {{ data.math2 }}
+                                </span>
+                            </td>
+                            <td>
+                                <a routerLink="/factures/detail">Modifier</a> &nbsp;&nbsp;
+                            </td>
+                        </tr>
+                    </tbody>
+                </nz-table>
+            </div>
+        </div>
+    </div>
+
+</div>

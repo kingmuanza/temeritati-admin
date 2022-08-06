@@ -1,0 +1,186 @@
+<div class="bg">
+    <div style="margin-top: 20px; margin-left: 20px;">
+        <nz-breadcrumb>
+            <nz-breadcrumb-item>Mes CRA</nz-breadcrumb-item>
+            <nz-breadcrumb-item>
+                <a>En cours</a>
+            </nz-breadcrumb-item>
+            <nz-breadcrumb-item>
+                <a>Janvier 2022</a>
+            </nz-breadcrumb-item>
+
+        </nz-breadcrumb>
+        <div class="titre">
+            Janvier 2022
+
+            <button class="attente" nz-button nzType="primary" style="">
+                <i nz-icon nzType="sync"></i>
+                en attente de justificatif
+            </button>
+        </div>
+        <div class="soustitre">
+            Remplissez votre compte rendu d’activité en fonction des jours travaillés.
+        </div>
+    </div>
+    <div class="contenu">
+        <div nz-row>
+            <div nz-col nzSpan="10">
+                <div class="mi-titre">
+                    Informations
+                </div>
+                <div nz-row style="margin-top: 20px">
+                    <div nz-col nzSpan="8">
+                        <b>Consultant</b> : John Doe
+                    </div>
+                    <div nz-col nzSpan="8">
+                        <b>Client</b> : Fortuneo
+                    </div>
+                    <div nz-col nzSpan="8">
+                        <b>Justificatif</b> :
+                        <a href="#">{{getNomFichier(fichier)}}</a>
+                    </div>
+                </div>
+                <div nz-row style="margin-top: 10px">
+
+                    <div nz-col nzSpan="8">
+                        <b>Société</b> : Temeritati consulting
+                    </div>
+                    <div nz-col nzSpan="8">
+                        <b>Mission</b> : Audit Financier
+                    </div>
+                </div>
+            </div>
+            <div nz-col nzSpan="14" style="text-align: right;">
+                <button (click)="valider()" nz-button nzType="primary" [disabled]="!fichier" style="margin-left: 20px;">
+                    <i nz-icon nzType="check"></i>
+                    Valider
+                </button>
+                <button (click)="getFichier()" nz-button nzType="primary" style="margin-left: 20px;">
+                    <i nz-icon nzType="file"></i>
+                    Attacher un justificatif
+                    <input #inputFile type="file" [(ngModel)]="fichier"  (change)="onSelectFile($event)" style="display: none;">
+                </button>
+                <button nz-button style="margin-left: 20px;"  [disabled]="!fichier">
+                    <i nz-icon nzType="download"></i>
+                    Sauvegarder
+                </button>
+                <button nz-button style="margin-left: 20px;"  [disabled]="!fichier">
+                    <i nz-icon nzType="download"></i>
+                    Exporter
+                </button>
+            </div>
+        </div>
+
+        <div style="min-height: 300px; margin-top: 20px; margin-bottom: 40px;">
+            <div nz-row>
+                <div nz-col nzFlex="1">
+                    <div class="ligne vide">
+
+                    </div>
+                    <div class="ligne grise">
+
+                        N°J
+
+                    </div>
+                    <div class="ligne primaire">
+                        AM
+                    </div>
+                    <div class="ligne primaire">
+                        PM
+                    </div>
+                    <div class="ligne blanche">
+                        Total
+                    </div>
+                </div>
+                <div nz-col nzFlex="22">
+                    <div style="margin-left: 20px ; margin-right: 20px;">
+                        <div nz-row>
+                            <div *ngFor="let item of liste" nz-col nzFlex="4">
+                                <app-mois></app-mois>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div nz-col nzFlex="1">
+                    <div class="shadow-1">
+                        <div class="ligne blanche">
+                            <b>
+                                Total
+                            </b>
+                        </div>
+                        <div class="ligne ">
+
+                        </div>
+                        <div class="ligne ">
+
+                        </div>
+                        <div class="ligne ">
+
+                        </div>
+                        <div class="ligne blanche">
+                            0,00
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div nz-row>
+            <div nz-col nzSpan="12">
+                <div class="mi-titre">
+                    Mes événements
+                    <button class="attente2" nz-button nzType="primary" style="">
+                        <i nz-icon nzType="plus"></i>
+                        Créer un événement
+                    </button>
+                </div>
+                <div style="margin-top: 20px">
+                    <div nz-row>
+                        <div nz-col nzSpan="6">
+                            <input checked nz-checkbox type="checkbox" style="width: 24px; vertical-align: middle;accent-color: #F759AB;">
+                            <span>
+                                Jours travaillés
+                            </span>
+                        </div>
+                        <div nz-col nzSpan="8">
+                            <div class="checkbox-design">
+                                <div class="checkbox-design-box">
+                                    <div class="checkbox-design-box-couleur orange">
+
+                                    </div>
+                                </div>
+                                <span style="vertical-align: top;">
+                                    Congés
+                                </span>
+                            </div>
+                            <div class="checkbox-design">
+                                <div class="checkbox-design-box">
+                                    <div class="checkbox-design-box-couleur bleu">
+
+                                    </div>
+                                </div>
+                                <span style="vertical-align: top;">
+                                    Congés
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div nz-col nzSpan="12">
+                <div class="mi-titre">
+                    Étapes
+                </div>
+                <div style="margin-top: 20px;">
+                    <nz-steps [nzCurrent]="1" nzProgressDot nzDirection="horizontal">
+                        <nz-step nzTitle="Créé" nzDescription=" le 28/02"></nz-step>
+                        <nz-step nzTitle="En attente de justificatif" nzDescription="Joignez un justificatif pour valider votre CRA"></nz-step>
+                        <nz-step nzTitle="Validé" nzDescription="Envoie le CRA à l’administration"></nz-step>
+                    </nz-steps>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

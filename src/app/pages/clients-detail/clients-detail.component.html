@@ -1,0 +1,513 @@
+<div class="bg">
+    <div style="margin-top: 20px; margin-left: 20px;">
+        <nz-breadcrumb>
+            <nz-breadcrumb-item>Clients</nz-breadcrumb-item>
+            <nz-breadcrumb-item>
+                <a>Fortuneo</a>
+            </nz-breadcrumb-item>
+
+        </nz-breadcrumb>
+        <div class="titre">Détails du client</div>
+        <div class="soustitre">
+            Vous pouvez modifier les informations de votre client ici
+        </div>
+    </div>
+
+    <div style="margin-top: 20px">
+        <ul nz-menu nzMode="horizontal">
+            <li nz-menu-item (click)="selectionner('aSaisir')" [nzSelected]="aSaisir">
+                <span class="menu-design">Informations</span>
+                <span class="badge">
+                    03
+                </span>
+            </li>
+            <li nz-menu-item (click)="selectionner('enAttente')" [nzSelected]="enAttente">
+                <span class="menu-design">Missions</span>
+                <span class="badge">
+                    02
+                </span>
+            </li>
+            <li nz-menu-item (click)="selectionner('rejetees')" [nzSelected]="rejetees">
+                <span class="menu-design">CRA</span>
+                <span class="badge">
+                    02
+                </span>
+            </li>
+            <li nz-menu-item (click)="selectionner('validees')" [nzSelected]="validees">
+                <span class="menu-design">Factures</span>
+                <span class="badge">
+                    02
+                </span>
+            </li>
+            <li nz-menu-item (click)="selectionner('archivees')" [nzSelected]="archivees">
+                <span class="menu-design">Documents contractuels</span>
+                <span class="badge">
+                    02
+                </span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="contenu">
+        <div *ngIf="aSaisir">
+            <div style="margin:40px">
+                <div style="margin-bottom:20px">
+                    <div nz-row>
+                        <div nz-col nzSpan="18">
+
+                        </div>
+                        <div nz-col nzSpan="2">
+                            <button nz-button nzType="primary" style="width: 90%;">
+                                <i nz-icon nzType="edit"></i>
+                                Editer
+                            </button>
+                        </div>
+                        <div nz-col nzSpan="2">
+                            <button nz-button style="width: 90%;">
+                                <i nz-icon nzType="save" nzTheme="outline"></i>
+                                Enregistrer
+                            </button>
+                        </div>
+                        <div nz-col nzSpan="2">
+                            <button nz-button style="width: 90%;">
+                                <i nz-icon nzType="container" nzTheme="outline"></i>
+                                Archiver
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contenu-item">
+                    <div class="mois">
+                        <div class="titre-petit">
+                            Générales
+                        </div>
+                        <div nz-row>
+                            <div nz-col nzSpan="8">
+                                <div class="mois-infos">
+                                    <div class="mois-infos-titre">
+                                        Nom du client
+                                    </div>
+                                    <div class="mois-infos-libelle">
+                                        Fortuneo
+                                    </div>
+                                </div>
+                            </div>
+                            <div nz-col nzSpan="8">
+                                <div class="mois-infos">
+                                    <div class="mois-infos-titre gris">
+                                        ID société
+                                    </div>
+                                    <div class="mois-infos-libelle gris">
+                                        ZOKAJENSB0291
+                                    </div>
+                                </div>
+                            </div>
+                            <div nz-col nzSpan="8">
+                                <div class="mois-infos">
+                                    <div class="mois-infos-titre">
+                                        Adresse
+                                    </div>
+                                    <div class="mois-infos-libelle">
+                                        123 rue Hugo, 75001 Paris
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contenu-item">
+                    <div class="mois">
+                        <div class="titre-petit">
+                            Facturation
+                        </div>
+                        <div nz-row>
+                            <div nz-col nzSpan="8">
+                                <div class="mois-infos">
+                                    <div class="mois-infos-titre">
+                                        Mail comptabilité
+                                    </div>
+                                    <div class="mois-infos-libelle">
+                                        Alexandra.clark@fortuno.fr
+                                    </div>
+                                </div>
+                            </div>
+                            <div nz-col nzSpan="8">
+                                <div class="mois-infos">
+                                    <div class="mois-infos-titre">
+                                        SIRET/SIREN
+                                    </div>
+                                    <div class="mois-infos-libelle">
+                                        1564615648/186682494
+                                    </div>
+                                </div>
+                            </div>
+                            <div nz-col nzSpan="8">
+                                <div class="mois-infos">
+                                    <div class="mois-infos-titre">
+                                        TVA intra-communautaire
+                                    </div>
+                                    <div class="mois-infos-libelle">
+                                        FR96384174348
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contenu-item">
+                    <div class="mois">
+                        <div class="titre-petit">
+                            Contacts
+                        </div>
+                        <div nz-row>
+                            <div nz-col nzSpan="6">
+                                <div class="mois-infos">
+                                    <div class="mois-infos-titre">
+                                        Nom
+                                    </div>
+                                    <div class="mois-infos-libelle">
+                                        Alexis Jonak
+                                    </div>
+                                </div>
+                            </div>
+                            <div nz-col nzSpan="6">
+                                <div class="mois-infos">
+                                    <div class="mois-infos-titre">
+                                        Département
+                                    </div>
+                                    <div class="mois-infos-libelle">
+                                        IT
+                                    </div>
+                                </div>
+                            </div>
+                            <div nz-col nzSpan="6">
+                                <div class="mois-infos">
+                                    <div class="mois-infos-titre">
+                                        Mail
+                                    </div>
+                                    <div class="mois-infos-libelle">
+                                        Alexis.jonak@fortuneo.fr
+                                    </div>
+                                </div>
+                            </div>
+                            <div nz-col nzSpan="6">
+                                <div class="mois-infos">
+                                    <div class="mois-infos-titre">
+                                        Téléphone
+                                    </div>
+                                    <div class="mois-infos-libelle">
+                                        06 34 56 76 98
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="enAttente">
+            <div style="margin:40px">
+                <div style="margin-bottom:20px">
+                    <div nz-row>
+                        <div nz-col nzSpan="16">
+
+                        </div>
+
+                        <div nz-col nzSpan="4">
+                            <button nz-button nzType="primary" style="width: 90%;">
+                                <i nz-icon nzType="plus"></i>
+                                Créer une nouvelle mission
+                            </button>
+                        </div>
+                        <div nz-col nzSpan="4">
+                            <div>
+                                <nz-input-group nzSearch [nzAddOnAfter]="prefixTemplateUser">
+                                    <input type="text" nz-input placeholder="Rechercher une mission" />
+                                </nz-input-group>
+                                <ng-template #prefixTemplateUser>
+                                    <button nz-button nzType="primary" nzSearch>
+                                        <i nz-icon nzType="search"></i>
+                                    </button>
+                                </ng-template>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nz-collapse>
+                    <nz-collapse-panel *ngFor="let panel of panels" [nzHeader]="panel.name" [nzActive]="panel.active" [nzDisabled]="panel.disabled">
+                        <div style="margin-top:0px">
+                            <div style="margin-bottom:20px">
+                                <div nz-row>
+                                    <div nz-col nzSpan="18">
+
+                                    </div>
+                                    <div nz-col nzSpan="2">
+                                        <button nz-button nzType="primary" style="width: 90%;">
+                                        <i nz-icon nzType="edit"></i>
+                                        Editer
+                                    </button>
+                                    </div>
+                                    <div nz-col nzSpan="2">
+                                        <button nz-button style="width: 90%;">
+                                        <i nz-icon nzType="save" nzTheme="outline"></i>
+                                        Enregistrer
+                                    </button>
+                                    </div>
+                                    <div nz-col nzSpan="2">
+                                        <button nz-button style="width: 90%;">
+                                        <i nz-icon nzType="container" nzTheme="outline"></i>
+                                        Archiver
+                                    </button>
+                                    </div>
+                                </div>
+                                <app-mission-display></app-mission-display>
+                            </div>
+                        </div>
+                    </nz-collapse-panel>
+                </nz-collapse>
+            </div>
+        </div>
+        <div *ngIf="rejetees">
+            <div style="margin:40px">
+                <div style="margin-bottom:20px">
+                    <div nz-row>
+                        <div nz-col nzSpan="12">
+
+                        </div>
+                        <div nz-col nzSpan="2">
+                            <button nz-button nzType="primary" style="width: 90%;">
+                                <i nz-icon nzType="container" nzTheme="outline"></i>
+                                Archiver
+                              </button>
+                        </div>
+                        <div nz-col nzSpan="2">
+                            <button nz-button style="width: 90%;">
+                                <i nz-icon nzType="download"></i>
+                                Télécharger
+                              </button>
+                        </div>
+                        <div nz-col nzSpan="4">
+                            <div>
+                                <nz-input-group nzSearch [nzAddOnAfter]="prefixTemplateUser">
+                                    <input type="text" nz-input placeholder="Rechercher un CRA" />
+                                </nz-input-group>
+                                <ng-template #prefixTemplateUser>
+                                    <button nz-button nzType="primary" nzSearch>
+                                    <i nz-icon nzType="search"></i>
+                                </button>
+                                </ng-template>
+                            </div>
+                        </div>
+                        <div nz-col nzSpan="4">
+                            <div style="margin-left: 20px">
+                                <nz-input-group nzSearch [nzSuffix]="prefixTemplateUser2">
+                                    <input type="text" nz-input placeholder="Chercher un mois" />
+                                </nz-input-group>
+                                <ng-template #prefixTemplateUser2>
+
+                                    <i nz-icon nzType="calendar" style="color: #F759AB"></i>
+
+                                </ng-template>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <nz-table #sortTable [nzData]="listOfDataValidees" nzTableLayout="fixed">
+                    <thead>
+                        <tr>
+                            <th style="width: 80px;" [nzChecked]="false"></th>
+                            <th *ngFor="let column of listOfColumnCRA" [nzSortFn]="column.compare" [nzSortPriority]="column.priority">
+                                <b>
+                                    {{ column.title }}
+                                </b>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let data of sortTable.data">
+                            <td style="width: 80px;" [nzChecked]="false"></td>
+                            <td>{{ data.name }}</td>
+                            <td>{{ data.chinese }}</td>
+                            <td>{{ data.math }}</td>
+                            <td>
+                                <a routerLink="/cra/detail">Modifier</a> &nbsp; &nbsp;
+                            </td>
+                        </tr>
+                    </tbody>
+                </nz-table>
+            </div>
+        </div>
+        <div *ngIf="validees">
+            <div style="margin:40px">
+                <div style="margin-bottom:20px">
+                    <div nz-row>
+                        <div nz-col nzSpan="2">
+                            <button nz-button nzType="primary" style="width: 100%;">
+                                Clients
+                            </button>
+                        </div>
+                        <div nz-col nzSpan="2">
+                            <button nz-button style="width: 100%;">
+                                Sous-traitants
+                            </button>
+                        </div>
+                        <div nz-col nzSpan="10">
+
+                        </div>
+                        <div nz-col nzSpan="2">
+                            <button nz-button style="width: 90%;">
+                                <i nz-icon nzType="container" nzTheme="outline"></i>
+                                Archiver
+                            </button>
+                        </div>
+                        <div nz-col nzSpan="4">
+                            <div>
+                                <nz-input-group nzSearch [nzAddOnAfter]="prefixTemplateUser">
+                                    <input type="text" nz-input placeholder="Rechercher une facture" />
+                                </nz-input-group>
+                                <ng-template #prefixTemplateUser>
+                                    <button nz-button nzType="primary" nzSearch>
+                                        <i nz-icon nzType="search"></i>
+                                    </button>
+                                </ng-template>
+                            </div>
+                        </div>
+                        <div nz-col nzSpan="4">
+                            <div style="margin-left: 20px">
+                                <nz-input-group nzSearch [nzSuffix]="prefixTemplateUser2">
+                                    <input type="text" nz-input placeholder="Chercher un mois" />
+                                </nz-input-group>
+                                <ng-template #prefixTemplateUser2>
+
+                                    <i nz-icon nzType="calendar" style="color: #F759AB"></i>
+
+                                </ng-template>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <nz-table #sortTable [nzData]="listOfDataFacture" nzTableLayout="fixed">
+                    <thead>
+                        <tr>
+                            <th style="width: 80px;" [nzChecked]="false"></th>
+                            <th *ngFor="let column of listOfColumnFacture" [nzSortFn]="column.compare" [nzSortPriority]="column.priority">
+                                <b>
+                                    {{ column.title }}
+                                </b>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let data of sortTable.data">
+                            <td style="width: 80px;" [nzChecked]="false"></td>
+                            <td>{{ data.name }}</td>
+                            <td>{{ data.chinese }}</td>
+                            <td>
+                                <span class="">
+                                    {{ data.math }}
+                                </span>
+                            </td>
+                            <td>
+                                <span class="">
+                                    {{ data.math2 }}
+                                </span>
+                            </td>
+                            <td>
+                                <a routerLink="/factures/detail">Modifier</a> &nbsp;&nbsp;
+                                <a routerLink="/factures/detail">Archiver</a> &nbsp;&nbsp;
+                            </td>
+                        </tr>
+                    </tbody>
+                </nz-table>
+            </div>
+        </div>
+        <div *ngIf="archivees">
+            <div style="margin:40px">
+                <div style="margin-bottom:20px">
+                    <div nz-row>
+                        <div nz-col nzSpan="2">
+                            <button nz-button nzType="primary" style="width: 100%;">
+                                Clients
+                            </button>
+                        </div>
+                        <div nz-col nzSpan="2">
+                            <button nz-button style="width: 100%;">
+                                Sous-traitants
+                            </button>
+                        </div>
+                        <div nz-col nzSpan="10">
+
+                        </div>
+                        <div nz-col nzSpan="2">
+                            <button nz-button style="width: 90%;">
+                                <i nz-icon nzType="container" nzTheme="outline"></i>
+                                Archiver
+                            </button>
+                        </div>
+                        <div nz-col nzSpan="4">
+                            <div>
+                                <nz-input-group nzSearch [nzAddOnAfter]="prefixTemplateUser">
+                                    <input type="text" nz-input placeholder="Rechercher une facture" />
+                                </nz-input-group>
+                                <ng-template #prefixTemplateUser>
+                                    <button nz-button nzType="primary" nzSearch>
+                                        <i nz-icon nzType="search"></i>
+                                    </button>
+                                </ng-template>
+                            </div>
+                        </div>
+                        <div nz-col nzSpan="4">
+                            <div style="margin-left: 20px">
+                                <nz-input-group nzSearch [nzSuffix]="prefixTemplateUser2">
+                                    <input type="text" nz-input placeholder="Chercher un mois" />
+                                </nz-input-group>
+                                <ng-template #prefixTemplateUser2>
+
+                                    <i nz-icon nzType="calendar" style="color: #F759AB"></i>
+
+                                </ng-template>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <nz-table #sortTable [nzData]="listOfDataFacture" nzTableLayout="fixed">
+                    <thead>
+                        <tr>
+                            <th style="width: 80px;" [nzChecked]="false"></th>
+                            <th *ngFor="let column of listOfColumnDocuments" [nzSortFn]="column.compare" [nzSortPriority]="column.priority">
+                                <b>
+                                    {{ column.title }}
+                                </b>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let data of sortTable.data">
+                            <td style="width: 80px;" [nzChecked]="false"></td>
+                            <td>{{ data.name }}</td>
+                            <td>{{ data.chinese }}</td>
+                            <td>
+                                <span class="">
+                                    {{ data.math }}
+                                </span>
+                            </td>
+                            <td>
+                                <span class="">
+                                    {{ data.math2 }}
+                                </span>
+                            </td>
+                            <td>
+                                <a routerLink="/factures/detail">Modifier</a> &nbsp;&nbsp;
+                            </td>
+                        </tr>
+                    </tbody>
+                </nz-table>
+            </div>
+        </div>
+    </div>
+
+</div>
