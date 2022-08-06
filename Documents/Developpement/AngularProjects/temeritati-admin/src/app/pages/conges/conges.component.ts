@@ -54,7 +54,7 @@ export class CongesComponent implements OnInit {
   typesConges = [
     { icone: 'global', libelle: 'Congés payés', demandes: 1, total: 7, restants: 3},
     { icone: 'fork', libelle: 'Congés maladie', demandes: 1, total: 7, restants: 3},
-    { icone: 'home', libelle: 'Récupération', demandes: 1, total: 7, restants: 3},
+    { icone: 'home', libelle: 'Sans solde', demandes: 1, total: 7, restants: 3},
   ]
 
   conges = [
