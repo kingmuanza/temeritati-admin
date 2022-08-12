@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LeClient } from 'src/app/_models/client.model';
+import { GenericServiceService } from 'src/app/_services/generic-service.service';
 
 @Component({
   selector: 'app-clients',
@@ -41,26 +43,18 @@ export class ClientsComponent implements OnInit {
     }
   ];
 
-  listOfData = [
-    {
-      name: 'Fortuneo',
-      chinese: 'Audit IT',
-      math: '20/04/2022',
-      math2: '3',
-      english: 'Saisir'
-    },
-    {
-      name: 'Fortuneo',
-      chinese: 'Audit IT',
-      math: '15/04/2022',
-      math2: '1',
-      english: 'Saisir'
-    },
-  ];
+  listOfData = new Array<LeClient>();
 
-  constructor() { }
+  constructor(
+    private genericService: GenericServiceService<LeClient>
+  ) { }
 
   ngOnInit(): void {
+    this.genericService.testUrlArray().then((datas) => {
+      console.log("Récupération des données sur le serveur");
+      console.log(datas);
+      this.listOfData = datas;
+    });
   }
 
   selectionner(menu: string) {

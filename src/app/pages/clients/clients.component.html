@@ -91,10 +91,10 @@
                     <tbody>
                         <tr *ngFor="let data of sortTable.data">
                             <td style="width: 80px;" [nzChecked]="false"></td>
-                            <td>{{ data.name }}</td>
-                            <td>{{ data.chinese }}</td>
-                            <td>{{ data.math }}</td>
-                            <td>{{ data.math2 }}</td>
+                            <td>{{ data.Prenom_client }} {{ data.Nom_client }}</td>
+                            <td>{{ data.Id_mission }}</td>
+                            <td>{{ data.Date_dernier_echange }}</td>
+                            <td>{{ 0 }}</td>
                             <td>
                                 <a routerLink="/clients/detail">Modifier</a>
                             </td>
@@ -151,13 +151,12 @@
                     <tbody>
                         <tr *ngFor="let data of sortTable.data">
                             <td style="width: 80px;" [nzChecked]="false"></td>
-                            <td>{{ data.name }}</td>
-                            <td>{{ data.chinese }}</td>
-                            <td>{{ data.math }}</td>
-                            <td>{{ data.math2 }}</td>
+                            <td>{{ data.Prenom_client }} {{ data.Nom_client }}</td>
+                            <td>{{ data.Id_mission }}</td>
+                            <td>{{ data.Date_dernier_echange }}</td>
+                            <td>{{ 0 }}</td>
                             <td>
-                                <a routerLink="/clients/detail">Modifier</a> &nbsp; &nbsp;
-                                <a href="#">Prévisualiser</a> &nbsp; &nbsp;
+                                <a routerLink="/clients/detail">Modifier</a>
                             </td>
                         </tr>
                     </tbody>
