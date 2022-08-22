@@ -46,11 +46,11 @@ export class ClientsComponent implements OnInit {
   listOfData = new Array<LeClient>();
 
   constructor(
-    private genericService: GenericServiceService<LeClient>
+    private clientService: GenericServiceService<LeClient>
   ) { }
 
   ngOnInit(): void {
-    this.genericService.testUrlArray().then((datas) => {
+    this.clientService.getAll('GetClients').then((datas) => {
       console.log("Récupération des données sur le serveur");
       console.log(datas);
       this.listOfData = datas;

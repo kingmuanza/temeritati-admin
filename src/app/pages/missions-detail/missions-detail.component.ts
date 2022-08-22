@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GenericServiceService } from 'src/app/_services/generic-service.service';
 
 @Component({
   selector: 'app-missions-detail',
@@ -146,9 +147,15 @@ export class MissionsDetailComponent implements OnInit {
     },
   ];
 
-  constructor() { }
+  constructor(
+    private missionService: GenericServiceService<any>
+  ) { }
 
   ngOnInit(): void {
+    this.missionService.get('GetMissionDetails', 'login').then((data) => {
+      console.log("Récupération des données sur le serveur");
+      console.log(data);
+    });
   }
 
   selectionner(menu: string) {

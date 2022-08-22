@@ -37,9 +37,9 @@ export class AppComponent {
         this.isEntreprise = true;
       } else {
         this.isEntreprise = false;
-      }
+      }/* 
       console.log('url');
-      console.log(this.url);
+      console.log(this.url); */
     });
   }
 

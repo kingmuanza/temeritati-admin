@@ -5,6 +5,7 @@
 export const environment = {
   production: false
 };
+export const lienBackEnd = 'https://tmi-manager-api-dev.azurewebsites.net/api/exemple/';
 export class Base {
   static url = "http://localhost:56074/api/";
 };
