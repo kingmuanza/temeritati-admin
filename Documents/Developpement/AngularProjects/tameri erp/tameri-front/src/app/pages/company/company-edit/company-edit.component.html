@@ -1,0 +1,98 @@
+<div class="container-fluid" style="margin-top: 16px;">
+    <h1 class="titre">Add a company</h1>
+
+    <div *ngIf="step === 1" class="first-step">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam maximus aliquam velit, sed malesuada ligula blandit vel.
+        </p>
+        <div class=" page-contenu ">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Name</span>
+                        <input [(ngModel)]="company.name" type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Adress</span>
+                        <input [(ngModel)]="company.address" type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Address</span>
+                        <input [(ngModel)]="company.address" type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Contact</span>
+                        <input [(ngModel)]="company.contact" type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Geolocation</span>
+                        <input [(ngModel)]="company.geolocation" type="text" class="form-control">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Get current location</button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button (click)="endFirstStep()" class="btn btn-primary">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="step === 2" class="second-step">
+        <p>
+            Aliquam maximus aliquam velit, sed malesuada ligula blandit vel.
+        </p>
+        <div class=" page-contenu ">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Names</span>
+                        <input [(ngModel)]="company.owner.names" type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Position</span>
+                        <input [(ngModel)]="company.owner.position" type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Phones</span>
+                        <input [(ngModel)]="company.owner.tel" type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Login</span>
+                        <input [(ngModel)]="company.owner.login" type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Password</span>
+                        <input [(ngModel)]="company.owner.password" type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Confirm Password</span>
+                        <input [(ngModel)]="company.owner.password" type="text" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button (click)="previous()" class="btn btn-outline-primary mr-5">Previous</button>&nbsp;
+                <button (click)="endSecondStep()" class="btn btn-primary">Next</button>
+            </div>
+        </div>
+    </div>
+
+</div>

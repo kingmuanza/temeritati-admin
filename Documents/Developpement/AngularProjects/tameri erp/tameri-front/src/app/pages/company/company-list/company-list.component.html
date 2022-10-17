@@ -1,0 +1,43 @@
+<div class="container-fluid" style="margin-top: 16px;">
+    <h1>Companies</h1>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam maximus aliquam velit, sed malesuada ligula blandit vel.
+    </p>
+
+    <div class=" page-contenu ">
+        <div class="">
+            <div class="">
+                <table datatable [dtOptions]="dtOptions " [dtTrigger]="dtTrigger " class="row-border hover ">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Libellé</th>
+                            <th>Code</th>
+                            <th>Contrat</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let company of companies">
+                            <td>
+                                <span [ngClass]="{'important': !company.bon}">
+                                    {{company.idcompany}}
+                                </span>
+                            </td>
+                            <td>{{company.libelle}}</td>
+                            <td>{{company.code}}</td>
+                            <td>
+                                <b *ngIf="company.idcontrat">
+                                    {{company.idcontrat?.libelle}}
+                                </b>
+                                <span *ngIf="!company.idcontrat" style="color: red;">
+                                    Aucun contrat
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
