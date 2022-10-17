@@ -14,6 +14,9 @@ import { CompanyViewComponent } from './pages/company/company-view/company-view.
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { CommunityEditComponent } from './pages/community/community-edit/community-edit.component';
+import { CommunityListComponent } from './pages/community/community-list/community-list.component';
+import { CommunityViewComponent } from './pages/community/community-view/community-view.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { HttpClientModule } from '@angular/common/http';
     AppbarComponent,
     CompanyListComponent,
     CompanyEditComponent,
-    CompanyViewComponent
+    CompanyViewComponent,
+    CommunityEditComponent,
+    CommunityListComponent,
+    CommunityViewComponent
   ],
   imports: [
     BrowserModule,

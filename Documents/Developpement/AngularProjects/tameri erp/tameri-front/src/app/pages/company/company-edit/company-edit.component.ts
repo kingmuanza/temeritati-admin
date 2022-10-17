@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Company } from 'src/app/_models/company.model';
 import { CrudService } from 'src/app/_services/crud.service';
 
@@ -12,14 +12,25 @@ export class CompanyEditComponent implements OnInit {
 
   step = 1;
 
-  company = new Company(); 
+  company = new Company();
+  isNewCompany = true;
 
   constructor(
     private router: Router,
+    private route: ActivatedRoute,
     private companyService: CrudService<Company>
   ) { }
 
   ngOnInit(): void {
+    this.route.paramMap.subscribe((paramMap) => {
+      const id = paramMap.get('id');
+      if (id) {
+        this.companyService.get('company', id).then((data) => {
+          this.company = data;
+          this.isNewCompany = false;
+        }); 
+      }
+    });
   }
 
   previous() {
@@ -35,9 +46,15 @@ export class CompanyEditComponent implements OnInit {
   }
 
   endSecondStep() {
-    this.companyService.create('company', this.company).then(() => {
-      this.router.navigate(['company', 'view', this.company.id]);
-    });
+    if (this.isNewCompany) {
+      this.companyService.create('company', this.company).then(() => {
+        this.router.navigate(['company', 'view', this.company.id]);
+      });
+    } else {
+      this.companyService.modify('company', this.company.id, this.company).then(() => {
+        this.router.navigate(['company', 'view', this.company.id]);
+      });
+    }
   }
 
 }

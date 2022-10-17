@@ -37,7 +37,7 @@ export class CrudService<T> {
     });
   }
 
-  get(table: string, id: number): Promise<T> {
+  get(table: string, id: number | string): Promise<T> {
     this.infos();
     this.showLoader();
     return new Promise((resolve, reject) => {
@@ -60,7 +60,7 @@ export class CrudService<T> {
     });
   }
 
-  modify(table: string, id: number, objet: T): Promise<any> {
+  modify(table: string, id: number | string, objet: T): Promise<any> {
     this.infos();
     this.showLoader();
     return new Promise((resolve, reject) => {

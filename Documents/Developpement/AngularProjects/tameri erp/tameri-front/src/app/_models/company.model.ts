@@ -1,3 +1,4 @@
+import { Community } from "./community.model";
 import { Owner } from "./owner.model";
 
 export class Company {
@@ -9,5 +10,6 @@ export class Company {
     geolocation: string = '';
     owner = new Owner();
     
+    community = new Community();
 
 }

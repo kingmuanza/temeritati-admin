@@ -1,17 +1,17 @@
-import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataTableDirective } from 'angular-datatables';
 import { Subject } from 'rxjs';
 import { DatatablesOptions } from 'src/app/_data/datatable.option';
-import { Company } from 'src/app/_models/company.model';
+import { Community } from 'src/app/_models/community.model';
 import { CrudService } from 'src/app/_services/crud.service';
 
 @Component({
-  selector: 'app-company-list',
-  templateUrl: './company-list.component.html',
-  styleUrls: ['./company-list.component.scss']
+  selector: 'app-community-list',
+  templateUrl: './community-list.component.html',
+  styleUrls: ['./community-list.component.scss']
 })
-export class CompanyListComponent implements OnInit, OnDestroy  {
+export class CommunityListComponent implements OnInit {
 
   // Datatables
   dtOptions: any = DatatablesOptions;
@@ -19,11 +19,11 @@ export class CompanyListComponent implements OnInit, OnDestroy  {
   @ViewChild(DataTableDirective) dtElement!: DataTableDirective;
   dtInstance!: Promise<DataTables.Api>;
 
-  companies = new Array<any>();
+  communities = new Array<Community>();
 
   constructor(
     private router: Router,
-    private companyService: CrudService<Company>,
+    private communityService: CrudService<Community>,
   ) {
   }
 
@@ -42,18 +42,18 @@ export class CompanyListComponent implements OnInit, OnDestroy  {
     return dtOptions;
   }
 
-  edit(company?:Company) {
-    if (company) {
-      this.router.navigate(['company', 'edit', company.id]);
+  edit(community?:Community) {
+    if (community) {
+      this.router.navigate(['community', 'edit', community.id]);
     } else {
-      this.router.navigate(['company', 'edit']);
+      this.router.navigate(['community', 'edit']);
     }
   }
 
   ngOnInit(): void {
     this.dtOptions = this.initNouveau();
-    this.companyService.getAll('company').then((data) => {
-      this.companies = data;
+    this.communityService.getAll('community').then((data) => {
+      this.communities = data;
     });
     setTimeout(() => {
       this.dtTrigger.next('');

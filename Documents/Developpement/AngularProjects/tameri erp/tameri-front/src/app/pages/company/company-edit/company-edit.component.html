@@ -1,9 +1,12 @@
 <div class="container-fluid" style="margin-top: 16px;">
-    <h1 class="titre">Add a company</h1>
+    <h1 *ngIf="!isNewCompany" class="titre">
+        Modify company {{company.id}}
+    </h1>
+    <h1 *ngIf="isNewCompany" class="titre">Add a company</h1>
 
     <div *ngIf="step === 1" class="first-step">
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam maximus aliquam velit, sed malesuada ligula blandit vel.
+            Company Infos
         </p>
         <div class=" page-contenu ">
             <div class="row">
@@ -15,8 +18,11 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="input-group mb-3">
-                        <span class="input-group-text">Adress</span>
-                        <input [(ngModel)]="company.address" type="text" class="form-control">
+                        <span class="input-group-text">Type</span>
+                        <select [(ngModel)]="company.type" type="text" class="form-control">
+                            <option value="TYPE1">Type 1</option>
+                            <option value="TYPE2">Type 2</option>
+                        </select>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -47,7 +53,7 @@
 
     <div *ngIf="step === 2" class="second-step">
         <p>
-            Aliquam maximus aliquam velit, sed malesuada ligula blandit vel.
+            Owner infos
         </p>
         <div class=" page-contenu ">
             <div class="row">
